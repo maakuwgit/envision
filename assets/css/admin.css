@@ -1,0 +1,34 @@
+.acf-field p.description {
+  border-left: 2px solid #0073aa;
+  padding-left: 0.5em !important;
+}
+
+.xdebug-var-dump {
+  padding-left: 200px;
+}
+
+.ll-group-label {
+  display: none;
+}
+
+.ll-group-title {
+  position: relative;
+  display: inline-block;
+  padding-top: 1em;
+  margin-left: 35px;
+  color: #333;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.ll-group-title:empty::before {
+  content: 'Insert Custom Group Label';
+  display: inline;
+  color: #ddd;
+}
+
+.acf-flexible-content .layout:not(.-collapsed) {
+  border: 2px solid lightgreen;
+}

@@ -1,0 +1,17 @@
+/**
+ * Logo styles
+ */
+
+.logo {
+
+}
+
+.logo--header {
+
+}
+
+.logo__brand {
+  float: left;
+  padding: 15px 15px;
+  @include font-size( 32 );
+}

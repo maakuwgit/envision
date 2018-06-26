@@ -1,0 +1,29 @@
+/**
+ * Footer styles
+ */
+.footer {
+
+}
+
+.footer__bottom {
+
+  .row {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.footer__credits {
+  text-align: right;
+}
+
+.footer__credits,
+.footer__copyright,
+.footer__social {
+  flex: 0 0 auto;
+
+  @include screen-sm {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}

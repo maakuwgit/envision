@@ -1,0 +1,51 @@
+/**
+ * Gravity Forms
+ */
+
+/**
+ * General
+ */
+
+.gform_wrapper {
+}
+
+.gform_fields {
+  @extend %clearfix;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gfield {
+  margin-bottom: 15px;
+}
+
+
+/**
+ * Validation
+ */
+
+.gfield_error {
+
+  input,
+  textarea {
+    border-color: $danger-color;
+  }
+}
+
+.validation_error {
+  color: $danger-color;
+  background-color: $danger-background;
+  border: 1px solid $danger-border;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.validation_message {
+  color: $danger-color;
+}
+
+// Honeypot
+.gform_validation_container {
+  display: none;
+}

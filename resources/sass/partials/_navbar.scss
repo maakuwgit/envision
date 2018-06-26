@@ -1,0 +1,143 @@
+/**
+ * Navbar styles
+ */
+
+// Top nav
+.navbar {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.primary-nav {
+  display: block;
+
+  @include screen-sm {
+    display: none;
+  }
+}
+
+.dropdown-menu.collapsed {
+  display: none;
+}
+
+.navbar-toggle {
+  display: none;
+  background-color: transparent;
+  border-color: #000;
+
+  .icon-bar {
+    background-color: #000;
+  }
+
+  @include screen-sm {
+    display: block;
+  }
+}
+
+.dropdown-menu {
+
+  @include screen-nav-mobile {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+// navbar-toggle
+// ==================================================
+.navbar-toggle {
+  padding: 15px 15px;
+  display: none;
+  cursor: pointer;
+
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+
+  // Normalize (<button>)
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  outline: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+
+  @include screen-nav-mobile {
+    display: inline-block;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &.open {
+    .navbar-toggle__inner {
+      transform: rotate(90deg);
+      background-color: transparent;
+
+      transition: transform 0.1s 0s cubic-bezier(0.215, 0.61, 0.355, 1),
+      background-color 0s 0.22s linear;
+
+      &::before {
+        top: 0;
+        transform: rotate(-45deg);
+        transition: top 0.1s 0.12s ease-out,
+        transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(45deg);
+        transition: bottom 0.1s 0.12s ease-out,
+        transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+    }
+  }
+
+}
+
+.navbar-toggle__box {
+  width: 22px;
+  height: 2px * 3 + 4px * 2;
+  display: inline-block;
+  position: relative;
+}
+
+.navbar-toggle__inner {
+  display: block;
+  top: 50%;
+  margin-top: 2px / -2;
+  transition: transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+              background-color 0s 0.1s linear;
+
+  &,
+  &::before,
+  &::after {
+    width: 22px;
+    height: 2px;
+    background-color: black;
+    border-radius: 2px;
+    position: absolute;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+  }
+
+  &::before {
+    top: (4px + 2px) * -1;
+    transition: top 0.1s 0.1s ease-in,
+    transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  &::after {
+    bottom: (4px + 2px) * -1;
+    transition: bottom 0.1s 0.1s ease-in,
+    transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+}

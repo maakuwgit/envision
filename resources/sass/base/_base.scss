@@ -1,0 +1,49 @@
+/**
+ * Base styles
+ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: $text-dark;
+  background-color: white;
+  @include font-size(16);
+  line-height: 1.4;
+
+  /**
+   * Set after content to use for easily checking
+   * mobile or desktop state. Hidden from view and
+   * screen readers because it's purely for javascript.
+   * Check app.js for more info
+   */
+  &::after {
+    content: 'desktop';
+    display: none;
+
+    @include screen-nav-mobile {
+      content: 'mobile';
+    }
+  }
+}
+
+::selection {
+  text-shadow: none;
+  color: $selection;
+  background: $selection-bg;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  color: $selection;
+  background: $selection-bg;
+}
