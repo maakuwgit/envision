@@ -1,0 +1,28 @@
+/**
+ * Post
+ * Used on single post pages
+ */
+
+.thumbnail {
+  position: relative;
+  width: 100%;
+  display: table;
+  background-color: transparent;
+
+  [data-background] {
+    position: relative;
+    height: 50vh;
+    min-height: 280px;
+    max-height: 330px;
+    padding: 0;
+    background-color: $teal;
+  }
+
+  .feature {
+    display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

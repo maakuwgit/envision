@@ -11,7 +11,6 @@
 }
 
 .logo__brand {
-  float: left;
-  padding: 15px 15px;
+  display: flex;
   @include font-size( 32 );
 }

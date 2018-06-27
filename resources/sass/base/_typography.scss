@@ -1,66 +1,109 @@
 /**
  * Typography
  */
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet');
 
-// Sans serif classes
-%sans-serif {
+%rubik {
+  font-family: $font-family;
+}
+
+.rubik {
+  @extend %rubik;
 }
 
 a {
-  color: $link-color;
-  text-decoration: $link-hover-decoration;
-  transition: all 0.10s ease-in-out;
-
+  color: currentColor;
+  text-decoration: $link-decoration;
   &:hover {
-    color: $link-hover-color;
     text-decoration: $link-hover-decoration;
   }
 }
 
-button {
-  transition: all 0.10s ease-in-out;
+h1,.h1, h2, .h2, h3,.h3, h4, .h4 {
+  margin: auto auto auto 0;
+  line-height: 1.5;
+  color: $navy;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+h3, .h3,
+h4, .h4 {
+  font-weight: $text-regular;
 }
 
-code {
-  white-space: normal;
-}
-
-h1,.h1, h2, .h2, h3,.h3, h4, .h4, h5, .h5, h6, .h6 {
-  margin: 0.5em auto;
-  line-height: 1.2;
+h2, .h2 {
+  font-weight: $text-light;
 }
 
 h1,
 .h1 {
-  font-size: 2.441em;
+  font-size: rem-calc(12);
+  line-height: 20px;
+  line-height: 1.42857142857143;
+  font-weight: $text-medium;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  @include screen-lg-up {
+    font-size: rem-calc(14);
+  }
 }
 
 h2,
 .h2 {
-  font-size: 1.953em;
+  font-size: rem-calc(36);
+  line-height: 52px;
+  line-height: 1.23809523809524;
+
+  @include screen-lg-up {
+    font-size: rem-calc(42);
+  }
 }
 
 h3,
 .h3 {
-  font-size: 1.563em;
+  font-size: rem-calc(18);
+  line-height: 52px;
+  line-height: 2.36363636363636;
+  @include screen-lg-up {
+    font-size: rem-calc(22);
+  }
+}
+
+%h4 {
+  font-size: rem-calc(18);
+  line-height: 27px;
+  line-height: 1.22727272727273;
+
+  @include screen-lg-up {
+    font-size: rem-calc(22);
+  }
 }
 
 h4,
 .h4 {
-  font-size: 1.25em;
+  @extend %h4;
 }
 
-h5,
-.h5 {
-  font-size: 1em;
+p, .p, td, li, dd, dt, address {
+  font-size: rem-calc(14);
+  line-height: 28px;
+  line-height: 1.75;
+
+  @include screen-lg-up {
+    font-size: rem-calc(16);
+  }
 }
 
-h6,
-.h6 {
-  font-size: 0.8em;
+p, li, td, th, a, dt, dd, span {
+  font-size: rem-calc(16);
+  line-height: 28px;
+  line-height: 1.75;
+}
+
+p, li, td, th, dt, dd {
+  color: #4C5874;
+}
+
+p {
+  font-weight: $text-regular;
 }

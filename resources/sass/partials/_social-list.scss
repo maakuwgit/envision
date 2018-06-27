@@ -37,12 +37,12 @@
   height: 2.057em;
   border-radius: 50%;
   background-color: $white;
-  color: $text-dark;
+  color: $white;
   border: none;
   text-align: center;
 
   &:hover {
-    background-color: $primary-color;
+    background-color: $black;
     color: $white;
   }
 }

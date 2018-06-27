@@ -63,9 +63,19 @@ function roots_scripts() {
   if ( $maps_api ) {
     wp_enqueue_script( 'google-maps', '//maps.googleapis.com/maps/api/js?key=' . $maps_api . '&libraries=places' );
   }
+
+  //ScrollMagic Requirements
+  wp_enqueue_script('TweenMax', '//cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js', array('jquery'), '1.20.3', true);
+  wp_enqueue_script('ScrollMagic', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js', array('TweenMax'), '2.0.5', true);
+  wp_enqueue_script('animation.gsap', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js', array('jquery'), '2.0.5', true);
+  wp_enqueue_script('indicators', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js', array('jquery'), '2.0.5', true);
+  //EOF
+
   wp_enqueue_script('roots_js', get_template_directory_uri() . $assets['js'], array(), null, true);
 
   wp_localize_script( 'roots_js', 'site_info', array( 'url' => home_url(), 'name' => get_bloginfo('name'), 'address' => array( 'street' => $street_address, 'city' => $city, 'state' => $state, 'zip' => $zip ) ) );
+
+  wp_enqueue_script('slick', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js', array('jquery'), '1.8.1', true);
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
 

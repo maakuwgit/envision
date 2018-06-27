@@ -8,17 +8,24 @@
 
 html {
   position: relative;
-  min-height: 100%;
-  font-size: 62.5%;
+  min-height: 100vh;
+  font-size: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $blue;
+  @include screen-xl-up {
+    font-size: 125%;
+  }
 }
 
 body {
-  color: $text-dark;
-  background-color: white;
-  @include font-size(16);
-  line-height: 1.4;
+  color: $text-color;
+  background-color: $white;
+  background: linear-gradient(180deg, $mint 0%, $white 100%);
+  font-size: 16px;
+  font-size: rem-calc(16);
+  line-height: 28px;
+  line-height: 1.75;
 
   /**
    * Set after content to use for easily checking
@@ -46,4 +53,88 @@ body {
   text-shadow: none;
   color: $selection;
   background: $selection-bg;
+}
+
+address {
+  font-style: normal;
+}
+
+blockquote {
+  position: relative;
+  font-size: rem-calc(20);
+  font-weight: $text-light;
+
+  p {
+    margin: 0 auto auto;
+    font-weight: inherit;
+    font-size: inherit;
+    &:before {
+      content: "“";
+      margin-left: rem-calc(-6);
+    }
+    &:after {
+      content: "”";
+    }
+  }
+
+  cite {
+    font-size: rem-calc(16);
+    font-weight: $text-medium;
+    font-style: normal;
+  }
+
+}
+
+code {
+  white-space: normal;
+}
+
+form {
+  flex: 0 1 auto;
+  width: 100%;
+  align-self: flex-start;
+}
+
+hr {
+  background-color: rgba(86,86,86,0.6);
+  width: 80%;
+  margin-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input:not([type="button"]):not([type="image"]):not([type="submit"]) {
+  @include input_base;
+}
+
+label {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+main {
+  min-height: 66vh;
+}
+
+select {
+  @include input_base;
+  padding-right: 3.5rem;
+  background-image: url('../img/svg/chevron-down-w.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  @include screen-lg-up {
+    &:hover {
+      background-image: url('../img/svg/chevron-down-y.svg');
+    }
+  }
+}
+
+textarea {
+  @include input_base;
 }

@@ -64,20 +64,94 @@
 }
 
 /**
+ * Flexi-box an element
+ */
+@mixin flexible($justify: center, $align-items: flex-start, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: wrap;
+  justify-content: $justify;
+  align-content: space-between;
+  align-items: $align-items;
+}
+
+/**
+ * Give an element the lighter grey background and drop-shadow effect
+ */
+@mixin raised($color: #191919) {
+  background-color: $color;
+  box-shadow: 0 #{rem-calc(2)} #{rem-calc(20)} $black;
+}
+
+/**
+ * Flexi-box an element
+ */
+@mixin section($use-pad-md: false, $use-pad-lg: false, $is_raised: false) {
+  @if $use-pad-md == false {
+    $use-pad-md: $padding-medium;
+  }
+  @if $use-pad-lg == false {
+    $use-pad-lg: $padding-large;
+  }
+  padding-top: $use-pad-md;
+  padding-bottom: $use-pad-md;
+  @include screen-lg-up {
+    padding-top: $use-pad-lg;
+    padding-bottom: $use-pad-lg
+  }
+}
+
+// Centered container element
+@mixin container-fixed($max-width: $container-width) {
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  width: 100%;
+  max-width: $max-width;
+}
+
+/**
+ * Input styles
+ */
+@mixin input_base {
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 1rem 0.875rem 1rem;
+  border: solid 1px $grey;
+  border-radius: 0;
+  font-size: rem-calc(16);
+  color: $lavender;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  @include screen-lg-up {
+    font-size: rem-calc(14);
+    &:hover {
+      cursor: pointer;
+      @include input_effects;
+    }
+  }
+  &:focus {
+    @include input_effects;
+  }
+}
+
+@mixin input_effects {
+  border-color: $link-hover-color;
+  outline: none;
+  &[type="file"]:after {
+    color: $black;
+    background-color: $link-hover-color;
+  }
+}
+
+
+/**
  * Background opacity
  */
 @mixin bg-opacity($color, $opacity: 0.3) {
   background: $color; /* The Fallback */
   background: rgba($color, $opacity);
-}
-
-// Centered container element
-@mixin container-fixed($gutter: $grid-gutter-width) {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left:  floor(($gutter / 2));
-  padding-right: ceil(($gutter / 2));
-  *zoom: 1;
 }
 
 /**
@@ -98,11 +172,24 @@
   }
 }
 
+
 /**
  * Breakpoints
  */
 @mixin screen-xl {
   @media (max-width: $screen-xl-maximum) {
+    @content;
+  }
+}
+
+@mixin screen-xl-up {
+  @media (min-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin screen-xl-only {
+  @media (min-width: $screen-xl) and (max-width: $screen-xxl-maximum) {
     @content;
   }
 }
@@ -113,8 +200,32 @@
   }
 }
 
+@mixin screen-lg-up {
+  @media (min-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin screen-lg-only {
+  @media (min-width: $screen-lg) and (max-width: $screen-xl-maximum) {
+    @content;
+  }
+}
+
 @mixin screen-md {
   @media (max-width: $screen-md-maximum) {
+    @content;
+  }
+}
+
+@mixin screen-md-up {
+  @media (min-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin screen-md-only {
+  @media (min-width: $screen-md) and (max-width: $screen-lg-maximum) {
     @content;
   }
 }
@@ -125,14 +236,50 @@
   }
 }
 
+@mixin screen-sm-up {
+  @media (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin screen-sm-only {
+  @media (min-width: $screen-sm) and (max-width: $screen-md-maximum) {
+    @content;
+  }
+}
+
 @mixin screen-xs {
   @media (max-width: $screen-xs-maximum) {
     @content;
   }
 }
 
+@mixin screen-xs-up {
+  @media (min-width: $screen-xs) {
+    @content;
+  }
+}
+
+@mixin screen-xs-only {
+  @media (min-width: $screen-xs) and (max-width: $screen-sm-maximum) {
+    @content;
+  }
+}
+
 @mixin screen-xxs {
   @media (max-width: $screen-xxs-maximum) {
+    @content;
+  }
+}
+
+@mixin screen-xxs-up {
+  @media (min-width: $screen-xxs) {
+    @content;
+  }
+}
+
+@mixin screen-xxs-only {
+  @media (min-width: $screen-xxs) and (max-width: $screen-xs-maximum) {
     @content;
   }
 }

@@ -38,6 +38,13 @@
       checkAdminBar();
 
       $(function() {
+        var hero = $('main >:first-child');
+
+        if( !hero.hasClass('hdg') &&
+            !hero.hasClass('hentry') ) {
+          $('.navbar').addClass('no-hero');
+        }
+
         $('a[href*="#"]:not(.js-no-scroll):not([href="#"])').click(function() {
           if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
             var target = $(this.hash);
@@ -55,6 +62,24 @@
             }
           }
         });
+      });
+
+      /* Collapse/Expand the navigation. Uses a combination of JS and CSS (in _navbar.scss) */
+      $('.navbar-toggle').click(function() {
+        var btn = $(this);
+
+        btn.toggleClass('open');
+
+        var secondary_nav = $('#secondary-nav');
+
+        $('body').toggleClass('locked');
+
+        if( !$(secondary_nav).hasClass('expanded') ) {
+          $(secondary_nav).addClass('expanded');
+        }else {
+          $(secondary_nav).removeClass('expanded');
+        }
+
       });
 
       // JavaScript to be fired on all pages
@@ -106,6 +131,35 @@
             });
         }
       });
+
+      //If theres a controller for ScrollMagic, spool it up!
+      if( typeof ScrollMagic !== 'undefined' ) {
+        var adminHeight   = ( $('#wpadminbar').length > 0 ? $('#wpadminbar').outerHeight() : 0 ),
+            primary_nav   = 'body > header.navbar',
+            hero          = 'main > :first-child.hdg';
+
+        var controller  = new ScrollMagic.Controller(),
+            offset      = 0;
+
+        if( $(hero) ) {
+          offset = $(hero).height() + $(primary_nav).height() + adminHeight ;
+
+          //Adding styles to the primary nav and pinning
+          if( $(primary_nav) ) {
+            var primary_pin = new ScrollMagic.Scene({
+              triggerElement: hero,
+              offset: offset
+            })
+            .on("enter", function () {
+              $(primary_nav).removeClass('top');
+            })
+            .on("leave", function () {
+              $(primary_nav).addClass('top');
+            })
+            .addTo(controller);
+          }
+        }
+      }
 
 
       // Magnific Popup

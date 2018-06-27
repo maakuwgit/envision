@@ -1,0 +1,59 @@
+/**
+ * Modal styles
+ */
+.modal {
+  position: relative;
+  width: 90vw;
+  max-width: 1000px;
+  margin: auto;
+  padding: 4rem;
+  background-color: $white;
+  &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba($white, 0.6);
+  }
+  .container {
+    width: 100%;
+  }
+  .post__header__title,
+  dl {
+    margin-left:3rem;
+    color: $black;
+    * {
+      color: inherit;
+    }
+  }
+  dt {
+    margin-bottom: 0.875rem;
+    font-weight: $text-regular;
+  }
+  dd {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.125;
+    &:first-of-type {
+      line-height: 1.25;
+      font-weight: $text-regular;
+    }
+  }
+
+  .row figure[class*=col-],
+  figure {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .mfp-close {
+    width: 2rem;
+    height: 2rem;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 4rem;
+    line-height: 2rem;
+    color: $black;
+  }
+}

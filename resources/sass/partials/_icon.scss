@@ -10,7 +10,13 @@
 //These are necessary
 //values come from icomoon
 .icon-LiftedLogic {
-  width: 6.89453125em;
+  width: rem-calc(102);
+  position: absolute;
+  align-self: center;
+  right: rem-calc(20);
+  clip: rect(0,102px,16px,75px);
+  top: rem-calc(6);
+  transform: scale(1.5);
 }
 
 .icon-google-plus {

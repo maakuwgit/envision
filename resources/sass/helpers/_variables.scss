@@ -10,31 +10,49 @@
  * 1. Colors
  * _________________________________*/
 
- // Base colors
-$selection: #000;
-$selection-bg: #ccc;
-$white: white;
+ // Base colors (ordered the greys by lightness from lightest to darkest)
 $black: black;
+$white: white;
+$mint: #F7FBFC;
+$blue: #102C5F;
+$royal: #1D3D7E;
+$navy: #20337B;
+$teal: #00959B;
+$grey: #E7E9ED;
+$lavender: #4C5874;
+
+// Markup Oriented
+$text-color: $lavender;
+$selection: $white;
+$selection-bg: $teal;
 
 // Official social colors
 $facebook: #3461a1;
 $twitter: #28aae1;
 $google: #d44a2c;
 
+// Success
+$success-color: green;
+
 // Danger
-$danger-color: #a94442;
+$danger-color: red;
 $danger-background: #f2dede;
-$danger-border: #ebccd1;
+$danger-border: red;
 
-// Theme colors
-$text-dark: #424242;
-$text-gray: gray;
-$primary-color: black;
+// Font Family
+$font-family: 'Rubik', sans-serif;
 
+// Font Weights
+$text-light: 300;
+$text-regular: 400;
+$text-medium: 500;
 
 /**
  * 2. Units, sections, etc.
  * _________________________________*/
+$rem-base: 16;
+$site-width: 1280px;
+$container-width: 1133px;
 
 // Aspect Ratios
 $ratio_3_2: 66.67%;
@@ -57,7 +75,7 @@ $width-1-6: 16.6666667%;
 
 // Media queries
 $screen-xl:  1600px;
-$screen-lg:  1200px;
+$screen-lg:  1280px;
 $screen-md:  992px;
 $screen-sm:  768px;
 $screen-xs:  480px;
@@ -79,19 +97,30 @@ $screen-lg-min: $screen-lg !default;
 // Choose from any of the "Media query variables"
 $screen-nav-mobile: $screen-md-maximum;
 
+//Padding Options
+$padding-xsmall: rem-calc(18.25);
+$padding-small: rem-calc(36.5);
+$padding-medium: rem-calc(73);
+$padding-large: rem-calc(120);
+
+//Thumbnails
+$thumbnail-height: rem-calc(170);
+
 // The point at which the navbar becomes uncollapsed (do not modify)
 $grid-float-breakpoint: $screen-nav-mobile + 1;
 
 // Grid
-$grid-columns:      12;
-$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-gutter-width: $padding-small;
+$grid-column-padding: $padding-xsmall;
 
 // Container widths
-$container-sm:    ($screen-sm - $grid-gutter-width);
-$container-md:    ($screen-md - $grid-gutter-width);
-$container-lg:    ($screen-lg - $grid-gutter-width);
+$container-sm:    (rem-calc($screen-sm) - $grid-gutter-width);
+$container-md:    (rem-calc($screen-md) - $grid-gutter-width);
+$container-lg:    (rem-calc($screen-lg) - $grid-gutter-width);
 
 // Links
-$link-color: darkblue;
-$link-hover-color: blue;
+$link-color: $text-color;
+$link-decoration: none;
+$link-hover-color: $teal;
 $link-hover-decoration: none;

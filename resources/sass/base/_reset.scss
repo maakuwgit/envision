@@ -7,7 +7,8 @@
  */
 
 html {
-  font-family: sans-serif; /* 1 */
+  @extend %rubik;
+  font-weight: $text-light;
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -114,10 +115,12 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
+b {
+  font-weight: $text-regular;
+}
 
-b,
 strong {
-  font-weight: bold;
+  font-weight: $text-medium;
 }
 
 /**
@@ -198,11 +201,11 @@ svg:not(:root) {
    ========================================================================== */
 
 /**
- * Address margin not present in IE 8/9 and Safari.
+ * Address seemingly random margin reset rules.
  */
-
+dd,
 figure {
-  margin: 1em 40px;
+  margin: 0;
 }
 
 /**
@@ -211,7 +214,8 @@ figure {
 
 hr {
   box-sizing: content-box;
-  height: 0;
+  height: 2px;
+  border: none;
 }
 
 /**
@@ -419,10 +423,11 @@ table {
 }
 
 td,
-th {
+th,
+ul {
   padding: 0;
 }
 
 ul {
-  padding: 0;
+  margin-top: 0;
 }
