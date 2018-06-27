@@ -12,5 +12,6 @@
 
 .logo__brand {
   display: flex;
+  z-index: 1;
   @include font-size( 32 );
 }
