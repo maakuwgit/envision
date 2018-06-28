@@ -1,3 +1,15 @@
+<?php
+  $street = get_field('contact_street_address', 'options');
+  $city   = get_field('contact_city', 'options');
+  $state  = get_field('contact_state', 'options');
+  $zip    = get_field('contact_zip', 'options');
+  $phone  = get_field('contact_phone_number', 'options');
+
+  $address  = get_bloginfo('name') . get_bloginfo('tagline');
+  $address  .= '<br>' . $street;
+  $address  .= '<br>' . $city . ', ' . $state . ' ' . $zip;
+  $address  .= '<br>' . format_phone($phone, true, '-');
+?>
 <footer class="footer" role="contentinfo">
 
   <div class="footer__top">
@@ -9,6 +21,16 @@
         <a class="footer__logo__anchor" href="<?php echo esc_url(home_url('/')); ?>">
           <?php echo ll_get_logo(); ?>
         </a><!-- .footer__logo__anchor -->
+
+        <?php if( $address ) : ?>
+        <address>
+          <?php echo $address; ?>
+        </address><!-- .footer__address -->
+        <?php endif; ?>
+
+        <nav class="footer__social">
+          <?php ll_get_social_list(); ?>
+        </nav><!-- .footer__social -->
 
       </div><!-- .col -->
 
@@ -33,10 +55,6 @@
       <div class="footer__copyright col center col-md-6of12 col-lg-6of12 col-xl-6of12">
        <p> &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All Rights Reserved.</p>
       </div><!-- .footer__copyright -->
-
-      <div class="footer__social">
-        <?php ll_get_social_list(); ?>
-      </div><!-- .footer__social -->
 
       <div class="footer__credits col center col-md-6of12 col-lg-6of12 col-xl-6of12">
         <p class="relative flex">

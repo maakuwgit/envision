@@ -205,8 +205,8 @@
 }
 
 .no-shadow,
-.thumbnail [data-background].no-shadow,
-[data-background].no-shadow {
+.thumbnail [data-backgrounder].no-shadow,
+[data-backgrounder].no-shadow {
   text-shadow: none;
   box-shadow: none;
 }
@@ -292,23 +292,27 @@ aside, article, main, div, header, footer, section, nav, main, menu, code, hr {
   }
 }
 
-.no-shadow {
-  img & {
-    box-shadow: none;
-  }
-}
-
 [data-clickthrough] {
   cursor: pointer;
 }
 
-[data-background] {
+[data-backgrounder] {
   background-position: center;
   background-size: cover;
-  box-shadow: 0 0 #{rem-calc(40)} black;
-  .feature img {
-    opacity: 0;
+
+  .feature {
+    max-height: 66.66667vh;
+    overflow: hidden;
+
+    img {
+      opacity: 0;
+      height: 0;
+      display: inline;
+      width: 0;
+    }
+    
   }
+
 }
 
 [data-slider] {

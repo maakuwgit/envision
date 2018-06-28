@@ -3,19 +3,10 @@
  */
 .footer {
   background-color: $royal;
-  background: linear-gradient(45deg, $teal 0%, $navy 100%);
+  background: linear-gradient(105deg, #0e597f 20%, $navy 100%);
 
   * {
     color: $white;
-  }
-
-  dl {
-    margin-top: rem-calc(65);
-    margin-bottom: rem-calc(65);
-    dt {
-      @extend %h4;
-    }
-
   }
 
   address,
@@ -54,6 +45,27 @@
     background-color: $blue;
   }
 
+  .footer__copyright,
+  .footer__credits {
+    > * {
+      font-weight: $text-light;
+    }
+  }
+
+  .footer__ll_logo {
+    width: rem-calc(52);
+    height: rem-calc(32);
+    padding-left: rem-calc(20);
+  }
+
+  .dropdown-toggle {
+    display: block;
+    @extend %h4;
+    cursor: text;
+    font-weight: $text-regular;
+    margin-bottom: rem-calc(17);
+  }
+
   @include screen-lg-up {
 
     .footer__logo_wrap,
@@ -73,13 +85,6 @@
         justify-content: flex-end;
       }
     }
-  }
-
-
-  .footer__ll_logo {
-    width: rem-calc(52);
-    height: rem-calc(32);
-    padding-left: rem-calc(20);
   }
 
   @include screen-sm {

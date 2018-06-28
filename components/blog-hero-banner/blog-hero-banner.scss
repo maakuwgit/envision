@@ -1,0 +1,41 @@
+/**
+ * blog-hero-banner Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-blog-hero-banner {
+  min-height: 66.6667vh;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: $navy;
+  background: linear-gradient(270deg, rgba($navy, 0.5) 0%, rgba($teal, 0.5) 100%);
+
+  .container {
+    min-height: inherit;
+  }
+
+  &.hdg {
+    text-align: left;
+
+    h1, h2 {
+      text-align: left;
+      color: $white;
+    }
+
+  }
+
+  .blog-hero__heading,
+  .blog-hero__subheading {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .blog-hero__subheading {
+    font-size: rem-calc(55);
+    line-height: 69px;
+    line-height: 1.25454545454545;
+  }
+}

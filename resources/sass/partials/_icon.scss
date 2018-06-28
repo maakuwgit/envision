@@ -14,8 +14,7 @@
   position: absolute;
   align-self: center;
   right: rem-calc(20);
-  clip: rect(0,102px,16px,75px);
-  top: rem-calc(6);
+  clip: rect(0, #{rem-calc(102)}, #{rem-calc(16)}, #{rem-calc(75)});
   transform: scale(1.5);
 }
 

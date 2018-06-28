@@ -1,4 +1,6 @@
-<div class="container">
-  <?php the_content(); ?>
-  <?php wp_link_pages(array('before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
-</div>
+<?php get_template_part('templates/contents/hero', 'page'); ?>
+<article <?php post_class(); ?>>
+  <div class="container row">
+    <?php include( locate_template('templates/partials/components.php') ); ?>
+  </div><!-- .container.row -->
+</article>

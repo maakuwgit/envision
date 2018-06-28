@@ -21,6 +21,16 @@ function format_text( $content ) {
   return $content;
 }
 
+/*
+ * Formats a marked up image using an image array. The output work with the data-background feature
+ * Attributes can be sent through for id and classes, pretty much anything
+ */
+function ll_format_image( $hero, $args=false ) {
+  //Data-Src-[size] attributes are read by the common.js on resize to determine with size to show
+  return '<img' . ($args ? implode(' ', $args) : '') . ' alt="'.$hero['title'].'" src="'.$hero['sizes']['medium'].'"
+  srcset="'.$hero['sizes']['large'].' 2x, '.$hero['url'].' 3x" data-src-md="'.$hero['sizes']['medium'].'" data-src-lg="'.$hero['sizes']['large'].'" data-src-xl="'.$hero['url'].'">';
+}
+
 /**
  * var_dump variable
  * wrap it in a <pre> tag
@@ -146,9 +156,9 @@ function ll_get_forms_as_options() {
 function ll_get_social_list() {
 
   $social_media_sites = array(
+    'instagram' => get_field( 'social_instagram', 'option' ),
     'facebook' => get_field( 'social_facebook', 'option' ),
     'twitter' => get_field( 'social_twitter', 'option' ),
-    'instagram' => get_field( 'social_instagram', 'option' ),
     'google_plus' => get_field( 'social_google_plus', 'option' ),
     'youtube' => get_field( 'social_youtube', 'option' ),
     'linkedin' => get_field( 'social_linkedin', 'option' ),

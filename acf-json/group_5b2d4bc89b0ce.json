@@ -144,7 +144,7 @@
         },
         {
             "key": "field_5b2d4bc8a4791",
-            "label": "Overlay Strength",
+            "label": "Overlay",
             "name": "blog_overlay_strength",
             "type": "number",
             "instructions": "",
@@ -175,11 +175,11 @@
     ],
     "menu_order": 0,
     "position": "acf_after_title",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530196051
+    "modified": 1530211038
 }

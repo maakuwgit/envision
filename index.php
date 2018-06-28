@@ -7,6 +7,8 @@
   <?php get_search_form(); ?>
 <?php endif; ?>
 
+<?php get_template_part('templates/contents/hero', 'blog'); ?>
+
 <?php while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/contents/content'); ?>
 <?php endwhile; ?>

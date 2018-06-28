@@ -27,7 +27,7 @@
           <?php
           wp_nav_menu( array(
             'theme_location' => 'secondary_navigation',
-            'menu_class'     => 'nav navbar-nav col col-sm-9of12 col-md-9of12 col-lg-9of12'
+            'menu_class'     => 'nav navbar-nav col col-sm-9of12 col-md-9of12 col-lg-9of12 col-xl-9of12'
           ));
           ?>
 

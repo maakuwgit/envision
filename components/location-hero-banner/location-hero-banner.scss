@@ -1,0 +1,51 @@
+/**
+ * location-hero-banner Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-location-hero-banner {
+  min-height: 66.6667vh;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: $navy;
+  background: linear-gradient(270deg, rgba($navy, 0.5) 0%, rgba($teal, 0.5) 100%);
+
+  .container {
+    min-height: inherit;
+  }
+
+  &.hdg {
+    text-align: left;
+
+    h1, h2 {
+      text-align: left;
+      color: $white;
+    }
+
+  }
+
+  .hero__heading,
+  .hero__subheading {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero__subheading {
+    font-size: rem-calc(55);
+    line-height: 69px;
+    line-height: 1.25454545454545;
+  }
+
+  .google-map__wrapper {
+    position: absolute !important;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: inherit;
+  }
+
+}

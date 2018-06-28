@@ -7,9 +7,11 @@
  */
 
 .social-list {
+  display: inline-flex;
   font-size: 1em;
   text-align: center;
   list-style: none;
+  margin-left: rem-calc(-10);
 
   .navbar & {
     display: inline-block;
@@ -24,22 +26,19 @@
 }
 
 .social-list__item {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 0.77em;
-  font-size: 1em;
+  display: inline-flex;
+  margin: auto;
+  font-size: rem-calc(16);
 }
 
 .social-list__link {
   position: relative;
-  display: inline-block;
-  width: 2.057em;
   height: 2.057em;
-  border-radius: 50%;
-  background-color: $white;
-  color: $white;
   border: none;
   text-align: center;
+  opacity: 0.7;
+  display: inline-flex;
+  padding: 0.625rem;
 
   &:hover {
     background-color: $black;

@@ -4,29 +4,22 @@
  */
 
 .post {
+  max-width: 937px;
+  padding-top: $padding-medium;
+  padding-bottom: $padding-medium;
 
-}
-
-.post__header {
-
-}
-
-.post__header__title {
-
+  @include screen-lg-up {
+    padding-top: $padding-large;
+    padding-bottom: $padding-large;
+  }
 }
 
 .post__content {
 
-}
-
-.post__footer {
-
-}
-
-.post__footer__nav {
-
-}
-
-.posts__comments {
+  figure, p, li, time, dd, caption, td {
+    margin-top: 0;
+    margin-bottom: $padding-small;
+    font-weight: 300;
+  }
 
 }
