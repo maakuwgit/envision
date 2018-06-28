@@ -1,7 +1,7 @@
 .icon {
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: rem-calc(26);
+  height: rem-calc(26);
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
@@ -24,11 +24,11 @@
 }
 
 .icon-facebook {
-  width: 0.59375em;
+  width: rem-calc(10);
 }
 
 .icon-instagram {
-  width: 0.84375em;
+  width: rem-calc(16);
 }
 
 .icon-pinterest {
@@ -36,7 +36,7 @@
 }
 
 .icon-twitter {
-  width: 0.9375em;
+  width: rem-calc(19);
 }
 
 .icon-youtube {

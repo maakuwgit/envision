@@ -187,13 +187,11 @@ function ll_gallery_output($output, $attr) {
   $output .= "</div>\n";
   return $output;
 }
+function ll_acf_google_map_api( $api ){
+  $maps_api = get_field( 'global_google_maps_api_key', 'option' );
+  $api['key'] = $maps_api;
 
-//enqueue our admin javascript/styles
-function ll_admin_enqueue_scripts() {
-  $screen = get_current_screen();
+  return $api;
 
-  wp_enqueue_style( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons' );
-  wp_enqueue_style( 'admin-css', get_template_directory_uri().'/assets/css/admin.css' );
-  wp_enqueue_script('admin-js', get_template_directory_uri() . '/assets/js/admin.js', 'jquery', '', true);
 }
-add_action('admin_enqueue_scripts', 'll_admin_enqueue_scripts');
+add_filter('acf/fields/google_map/api', 'll_acf_google_map_api');

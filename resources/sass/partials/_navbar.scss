@@ -299,7 +299,7 @@ body.locked {
   height: 0;
   z-index: 0;
   padding: #{rem-calc(177)} #{rem-calc(73)} #{rem-calc(73)} #{rem-calc(73)};
-  background: linear-gradient(90deg, $navy 0%, $teal 100%);
+  background: linear-gradient(90deg, #12224f 50%, #034b5d 100%);
   transition: height 150ms ease-out;
 
   &.expanded {
@@ -347,7 +347,10 @@ body.locked {
       }
 
       .menu-item {
-        width: 50%;
+
+        @include screen-md-up {
+          width: 50%;
+        }
 
         a {
           display: block;
@@ -364,10 +367,16 @@ body.locked {
 
   .dropdown-toggle,
   .dropdown-menu {
-    flex: 0 0.66 auto;
-    width: 66.33334%;
+    left: 66.6667%;
     display: flex;
-    left: 33.33334%;
+    flex: 1 .66 auto;
+    width: 100%;
+
+    @include screen-md-up {
+      flex: 0 0.66 auto;
+      width: 66.33334%;
+      left: 33.33334%;
+    }
   }
 
   .dropdown-menu {
@@ -381,6 +390,10 @@ body.locked {
 }
 
 #menu-secondary-navigation {
+  @include screen-lg-up {
+    margin-left: 0;
+  }
+
   > .menu-item {
     margin-bottom: $padding-xsmall;
   }

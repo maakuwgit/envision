@@ -20,18 +20,34 @@
 
       <?php if (has_nav_menu('secondary_navigation')) : ?>
 
-      <nav class="secondary-nav" id="secondary-nav" role="navigation">
-        <?php wp_nav_menu(array('theme_location' => 'secondary_navigation', 'menu_class' => 'container nav navbar-nav'));?>
-      </nav><!-- .secondary-nav -->
+      <div class="secondary-nav" id="secondary-nav" role="navigation">
+
+        <div class="container row">
+
+          <?php
+          wp_nav_menu( array(
+            'theme_location' => 'secondary_navigation',
+            'menu_class'     => 'nav navbar-nav col col-sm-9of12 col-md-9of12 col-lg-9of12'
+          ));
+          ?>
+
+          <?php echo get_sidebar(); ?>
+
+        </div><!-- .container -->
+
+      </div><!-- .secondary-nav -->
 
       <?php endif; ?>
 
       <?php if (has_nav_menu('primary_navigation')) : ?>
       <nav class="primary-nav flex" id="primary-nav" role="navigation">
         <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
-        endif;
+        if ( has_nav_menu('primary_navigation') ) {
+          wp_nav_menu( array(
+            'theme_location'  => 'primary_navigation',
+            'menu_class'      => 'nav navbar-nav'
+          ) );
+        }
         ?>
       </nav><!-- .primary-nav -->
       <?php endif; ?>

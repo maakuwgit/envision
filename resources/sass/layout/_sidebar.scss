@@ -3,4 +3,42 @@
  */
 
 .sidebar {
+
+  .secondary-nav & {
+    * {
+      color: $white;
+    }
+
+    .share {
+      display: inline-flex;
+      padding: rem-calc(10);
+    }
+
+    .textwidget {
+      margin-left: rem-calc(-10);
+      margin-right: rem-calc(-10);
+      width: calc( 100% + #{rem-calc(20)});
+
+      address, p {
+        margin-top: rem-calc(5px);
+        padding-left: rem-calc(10);
+        padding-right: rem-calc(10);
+        font-size: rem-calc(16);
+        font-weight: $text-light;
+      }
+
+      p {
+        line-height: 19px;
+        line-height: 1.1875;
+      }
+    }
+
+    .directions {
+      font-size: rem-calc(18);
+      line-height: 30px;
+      line-height: 1.66666666666667;
+      text-decoration: underline;
+    }
+  }
+
 }
