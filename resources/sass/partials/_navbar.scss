@@ -307,47 +307,83 @@ body.locked {
     opacity: 1;
     top: 0;
     height: 100%;
+    overflow: scroll;
     transition: height 300ms ease-out;
   }
 
   .navbar-nav {
     flex-direction: column;
     height: 100%;
+    align-content: stretch;
     justify-content: center;
     align-items: flex-start;
-  }
 
-  .menu-item {
-    a {
-      display: block;
-      padding: #{rem-calc(20)} 0;
-      font-size: rem-calc(42);
-      line-height: 100px;
-      line-height: 0.42;
-      color: $white;
-      text-transform: initial;
-      font-weight: 300;
+    .two-column .dropdown-menu {
+      flex-wrap: wrap;
+      flex-direction: row;
     }
 
-    .menu-item a {
-      display: block;
-      padding: #{rem-calc(15)} 0;
-      font-size: rem-calc(16);
-      line-height: 1;
+    > .menu-item {
+      position: relative;
+      display: flex;
+      align-self: stretch;
+
+      a {
+        display: block;
+        padding: #{rem-calc(20)} 0;
+        padding: 0.875vh 0;
+        font-size: rem-calc(42);
+        line-height: 100px;
+        line-height: 2.38095238095238;
+        line-height: 7.5vh;
+        color: $white;
+        text-transform: initial;
+        font-weight: 300;
+        opacity: 0.7;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .menu-item {
+        width: 50%;
+
+        a {
+          display: block;
+          width: auto;
+          opacity: 1;
+          padding: #{rem-calc(15)} 0;
+          font-size: rem-calc(16);
+          font-weight: $text-regular;
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  .dropdown-toggle,
+  .dropdown-menu {
+    flex: 0 0.66 auto;
+    width: 66.33334%;
+    display: flex;
+    left: 33.33334%;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    align-items: flex-start;
+
+    &.collapsed {
+      display: none;
     }
   }
 }
 
-.dropdown-menu.collapsed {
-}
-
-.dropdown-toggle {
-  display: flex;
-  margin-bottom: $padding-xsmall;
-  font-size: rem-calc(22);
-  line-height: 27px;
-  line-height: 1.22727272727273;
-  font-weight: normal;
+#menu-secondary-navigation {
+  > .menu-item {
+    margin-bottom: $padding-xsmall;
+  }
 }
 
 .dropdown-menu {

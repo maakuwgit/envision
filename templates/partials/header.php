@@ -21,7 +21,7 @@
       <?php if (has_nav_menu('secondary_navigation')) : ?>
 
       <nav class="secondary-nav" id="secondary-nav" role="navigation">
-        <?php wp_nav_menu(array('theme_location' => 'secondary_navigation', 'menu_class' => 'nav navbar-nav'));?>
+        <?php wp_nav_menu(array('theme_location' => 'secondary_navigation', 'menu_class' => 'container nav navbar-nav'));?>
       </nav><!-- .secondary-nav -->
 
       <?php endif; ?>
