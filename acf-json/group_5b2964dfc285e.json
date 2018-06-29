@@ -1,67 +1,11 @@
 {
     "key": "group_5b2964dfc285e",
     "title": "Call-to-Action",
-    "location": [
-        [
-            {
-                "param": "page_template",
-                "operator": "!=",
-                "value": "default"
-            },
-            {
-                "param": "page_template",
-                "operator": "!=",
-                "value": "templates\/template-contact.php"
-            },
-            {
-                "param": "page_template",
-                "operator": "!=",
-                "value": "templates\/template-form-template.php"
-            },
-            {
-                "param": "page_template",
-                "operator": "!=",
-                "value": "templates\/template-home.php"
-            },
-            {
-                "param": "page_template",
-                "operator": "!=",
-                "value": "templates\/template-review.php"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": 1,
-    "description": "",
     "fields": [
         {
-            "key": "field_5b2965017de4e",
-            "label": "Show Logo?",
-            "name": "cta_show_logo",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 1,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
             "key": "field_5b2965c4fa55a",
-            "label": "Section Title",
-            "name": "cta_section_title",
+            "label": "Heading",
+            "name": "cta_heading",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -77,7 +21,7 @@
                     "key": "field_5b2965c4fa55b",
                     "label": "Text",
                     "name": "text",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -86,11 +30,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "We can’t wait to meet you!",
-                    "placeholder": "We can’t wait to meet you!",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "br"
                 },
                 {
                     "key": "field_5b2965c4fa55c",
@@ -134,7 +78,59 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_5b2965017de4e",
+            "label": "Form ID",
+            "name": "cta_form_id",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 10,
+            "step": ""
         }
     ],
-    "modified": 1530194790
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/template-home.php"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "location"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "procedure"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1530285492
 }

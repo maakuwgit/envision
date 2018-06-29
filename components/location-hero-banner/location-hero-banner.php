@@ -41,6 +41,7 @@ $subheading       = $component_data['subheading']['text'];
 $subheading_tag   = $component_data['subheading']['tag'];
 $map              = $component_data['map'];
 $mid              = uniqid('location-hero-map-');
+$overlay          = 0.5;
 ?>
 
 <header class="ll-location-hero-banner hdg relative<?php echo implode( " ", $classes ); ?>" <?php echo ( $id ? 'id="'.$id.'"' : '' ) ?> data-component="location-hero-banner">
@@ -53,6 +54,7 @@ $mid              = uniqid('location-hero-map-');
       right: 0;
       bottom: 0;
       left: 0;
+      z-index: 2;
       opacity: <?php echo $overlay; ?>;
       background-color: rgba(17,43,95,0.5);
       background: linear-gradient(270deg, #00959B 0%, #20337B 100%);

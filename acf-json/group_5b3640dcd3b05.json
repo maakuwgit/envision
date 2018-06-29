@@ -1,11 +1,11 @@
 {
-    "key": "group_5b240e708c001",
-    "title": "Location Hero Banner",
+    "key": "group_5b3640dcd3b05",
+    "title": "Prefooter",
     "fields": [
         {
-            "key": "field_5b240e7092213",
-            "label": "Heading",
-            "name": "hero_heading",
+            "key": "field_5b3640dcdaac3",
+            "label": "Title",
+            "name": "prefooter_title",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -18,7 +18,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5b240e709e95d",
+                    "key": "field_5b3640dcdd5aa",
                     "label": "Text",
                     "name": "text",
                     "type": "textarea",
@@ -31,13 +31,13 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
+                    "placeholder": "Experience a better version of you.",
                     "maxlength": "",
                     "rows": 2,
                     "new_lines": "br"
                 },
                 {
-                    "key": "field_5b240e709e9bf",
+                    "key": "field_5b3640dcdd60b",
                     "label": "Tag",
                     "name": "tag",
                     "type": "button_group",
@@ -46,7 +46,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "15",
-                        "class": "text-center",
+                        "class": "",
                         "id": ""
                     },
                     "choices": {
@@ -54,17 +54,17 @@
                         "h2": "H2"
                     },
                     "allow_null": 0,
-                    "default_value": "h1",
+                    "default_value": "h2",
                     "layout": "vertical",
                     "return_format": "value"
                 }
             ]
         },
         {
-            "key": "field_5b240e709225d",
-            "label": "Subheading",
-            "name": "hero_subheading",
-            "type": "group",
+            "key": "field_5b3640dcdab67",
+            "label": "Content",
+            "name": "prefooter_content",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -73,69 +73,50 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5b240e70a7e18",
-                    "label": "Text",
-                    "name": "text",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "85",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 2,
-                    "new_lines": "br"
-                },
-                {
-                    "key": "field_5b240e70a7ed1",
-                    "label": "Tag",
-                    "name": "tag",
-                    "type": "button_group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "15",
-                        "class": "text-center",
-                        "id": ""
-                    },
-                    "choices": {
-                        "h1": "H1",
-                        "h2": "H2",
-                        "h3": "H3"
-                    },
-                    "allow_null": 0,
-                    "default_value": "h2",
-                    "layout": "vertical",
-                    "return_format": "value"
-                }
-            ]
+            "default_value": "Discover which treatment option is right for you with our free virtual consultation tool. Our schedule an appointment and we will personally sit with you to discuss all your options. We look forward to working with you.\r\n<a class=\"btn btn--outlined\" title=\"Request a consultation\" href=\"\/request-a-consultation\">Request a consultation<\/a><a class=\"btn btn--outlined\" title=\"Request a consultation\" href=\"\/virtual-consultation\">Virtual consultation<\/a>",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/template-home.php"
+            }
+        ],
         [
             {
                 "param": "post_type",
                 "operator": "==",
                 "value": "location"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "procedure"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "13"
+            }
         ]
     ],
     "menu_order": 0,
-    "position": "acf_after_title",
+    "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530287553
+    "modified": 1530287638
 }

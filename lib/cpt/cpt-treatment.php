@@ -10,7 +10,7 @@ if ( ! function_exists('register_procedure_custom_post_type') ) {
     $labels = array(
       'name'                => 'Procedures',
       'singular_name'       => 'Procedure',
-      'menu_name'           => 'Procedure',
+      'menu_name'           => 'Procedures',
       'parent_item_colon'   => 'Parent Procedure',
       'all_items'           => 'All Procedures',
       'view_item'           => 'View Procedure',

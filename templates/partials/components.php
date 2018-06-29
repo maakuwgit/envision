@@ -5,7 +5,7 @@ if( have_rows( 'components' ) ) {
 
   while( have_rows( 'components' ) ) {
     the_row();
-    //var_dump(get_row_layout());
+
     switch( get_row_layout() ) {
       case 'hero' :
         //Pretty much every page
@@ -113,19 +113,16 @@ if( have_rows( 'components' ) ) {
           true
         );
       break;
-      case 'two_col_block' :
+      case 'two-col-w-headline' :
         //Home Page, “Currently Located in 3 Cities” section
         $blocks = array(
-          'l_title'     => get_sub_field("two_col_block_left_title"),
-          'l_intro' => get_sub_field("two_col_block_left_intro_text"),
-          'l_content' => get_sub_field("two_col_block_left_content"),
-          'r_title'     => get_sub_field("two_col_block_right_title"),
-          'r_intro' => get_sub_field("two_col_block_right_intro_text"),
-          'r_content' => get_sub_field("two_col_block_right_content")
+          'title'     => get_sub_field("two-col-w-headline-title"),
+          'l_content' => get_sub_field("two-col-w-headline-l_content"),
+          'r_content' => get_sub_field("two-col-w-headline-r_content")
         );
 
         $components .= ll_include_component(
-          'two-col-block',
+          'two-col-w-headline',
           $blocks,
           array(),
           true

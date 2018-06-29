@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_5b240b1db71bf",
-            "label": "Main Heading",
+            "label": "Heading",
             "name": "hero_heading",
             "type": "group",
             "instructions": "",
@@ -26,7 +26,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "80",
                         "class": "",
                         "id": ""
                     },
@@ -45,7 +45,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "20",
                         "class": "",
                         "id": ""
                     },
@@ -84,7 +84,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "80",
                         "class": "",
                         "id": ""
                     },
@@ -103,7 +103,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "20",
                         "class": "",
                         "id": ""
                     },
@@ -121,14 +121,14 @@
         },
         {
             "key": "field_5b240b6ab71c5",
-            "label": "Image",
+            "label": "Hero",
             "name": "hero_image",
             "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -144,22 +144,6 @@
             "mime_types": ""
         },
         {
-            "key": "field_5b240b90b71c6",
-            "label": "Looping Video",
-            "name": "hero_video",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
             "key": "field_5b250ea4c5a3c",
             "label": "Overlay",
             "name": "overlay_strength",
@@ -168,7 +152,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "10",
                 "class": "",
                 "id": ""
             },
@@ -179,6 +163,22 @@
             "min": 0,
             "max": 1,
             "step": "0.1"
+        },
+        {
+            "key": "field_5b240b90b71c6",
+            "label": "Looping Video",
+            "name": "hero_video",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -192,6 +192,16 @@
                 "param": "page_template",
                 "operator": "!=",
                 "value": "templates\/template-form-template.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "templates\/template-gallery.php"
+            },
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "235"
             }
         ],
         [
@@ -204,11 +214,11 @@
     ],
     "menu_order": 0,
     "position": "acf_after_title",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530217751
+    "modified": 1530287283
 }

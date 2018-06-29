@@ -1,0 +1,104 @@
+{
+    "key": "group_5b364c3b0d54d",
+    "title": "Flexible Components",
+    "fields": [
+        {
+            "key": "field_5b364c35cc6c1",
+            "label": "Components",
+            "name": "components",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "5b364c9422e0d": {
+                    "key": "5b364c9422e0d",
+                    "name": "two-col-w-headline",
+                    "label": "2 Column w\/ Headline",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b364cd2cc6c2",
+                            "label": "2 Column w\/ Headline",
+                            "name": "two-col-w-headline",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b364973ba1ba"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "procedure"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "location"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "17"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "13"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "5"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1530285574
+}

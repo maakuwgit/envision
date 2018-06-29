@@ -1,43 +1,6 @@
 {
     "key": "group_5b2c08d36288f",
     "title": "Three Column Content",
-    "location": [
-        [
-            {
-                "param": "post_template",
-                "operator": "!=",
-                "value": "templates\/template-home.php"
-            },
-            {
-                "param": "post_template",
-                "operator": "!=",
-                "value": "templates\/template-form-template.php"
-            },
-            {
-                "param": "post_template",
-                "operator": "!=",
-                "value": "templates\/template-contact.php"
-            },
-            {
-                "param": "post_template",
-                "operator": "!=",
-                "value": "default"
-            },
-            {
-                "param": "post_template",
-                "operator": "!=",
-                "value": "templates\/template-review.php"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": 1,
-    "description": "",
     "fields": [
         {
             "key": "field_5b2c0980270a7",
@@ -157,5 +120,42 @@
             ]
         }
     ],
-    "modified": 1530194792
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "templates\/template-home.php"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "templates\/template-form-template.php"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "default"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "default"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1530277185
 }

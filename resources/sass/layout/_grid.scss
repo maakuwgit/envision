@@ -65,14 +65,14 @@
 
     &:not[data-component] {
       padding:0 $padding-xsmall;
-    }
 
-    @include screen-md-only {
-      padding:0 $padding-xsmall;
-    }
+      @include screen-md-only {
+        padding:0 $padding-xsmall;
+      }
 
-    @include screen-lg-up {
-      padding:0 $padding-small;
+      @include screen-lg-up {
+        padding:0 $padding-small;
+      }
     }
 
     &.flex-end {
@@ -91,7 +91,13 @@
       align-self: stretch;
     }
 
-    &:not([class*="xxs-"]):not([class*="xs-"]):not([class*="sm-"]):not([class*="md-"]):not([class*="lg-"]):not([class*="xl-"]) {
+    &:not([class*="xxs-"])
+    :not([class*="xs-"])
+    :not([class*="sm-"])
+    :not([class*="md-"])
+    :not([class*="lg-"])
+    :not([class*="xl-"])
+    :not([data-component]) {
       flex: 0 1 auto;
     }
 

@@ -4,11 +4,6 @@
 
 .gform_wrapper {
   @include flexible();
-
-  .gform_heading {
-    margin: auto;
-  }
-
 }
 
 .gform_fields {
@@ -25,23 +20,15 @@
 }
 
 .gform_heading {
-  @include flexible();
-  width: 66.66666667%;
-  max-width: 565px;
-  flex: 0 0.66 auto;
-  margin: auto;
-  text-align: center;
+  @extend %header;
 }
 
 .gform_supertitle {
-  padding-top: 229px;
-  margin: auto;
-  color: $silver;
+  @extend %supertitle;
 }
 
 .gform_title {
-  @extend %h0;
-  margin: auto auto 12px auto;
+  @extend %title;
 }
 
 .gform_body {

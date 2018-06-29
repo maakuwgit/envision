@@ -1,0 +1,39 @@
+/**
+ * Two Column w/ Headline Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-two-column-w-headline {
+  padding-top: $padding-small;
+  padding-bottom: $padding-small;
+
+  @include screen-lg-up {
+    padding-top: $padding-large;
+    padding-bottom: $padding-medium;
+  }
+
+  .two-column-w-headline__block {
+
+    p, ul {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      font-weight: $text-light;
+    }
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+
+  }
+}

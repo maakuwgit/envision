@@ -1,10 +1,10 @@
 {
     "key": "group_5b35650abf1f4",
-    "title": "Superheader",
+    "title": "Superheading",
     "fields": [
         {
             "key": "field_5b3565215119e",
-            "label": "Superheader",
+            "label": "Superheading",
             "name": "superheader",
             "type": "text",
             "instructions": "",
@@ -29,6 +29,20 @@
                 "operator": "==",
                 "value": "templates\/template-form-template.php"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "templates\/template-gallery.php"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "235"
+            }
         ]
     ],
     "menu_order": 0,
@@ -39,5 +53,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530226665
+    "modified": 1530281803
 }

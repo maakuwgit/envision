@@ -1,0 +1,16 @@
+/**
+ * supertitle Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+%supertitle {
+  padding-top: 229px;
+  margin: auto;
+  color: $silver;
+}
+
+.ll-supertitle {
+  @extend %supertitle;
+}

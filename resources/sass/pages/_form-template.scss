@@ -1,5 +1,5 @@
 /**
- * Archive
+ * Form Template
  */
 body.page-template-template-form {
   > article {
@@ -13,22 +13,6 @@ body.page-template-template-form {
     padding-bottom: $padding-small;
     @include screen-lg-up {
       padding-bottom: $padding-medium;
-    }
-  }
-
-  .gform_superheader {
-    padding-top: 229px;
-  }
-
-  @include screen-lg-up {
-    #gform_1 {
-      .gfield:last-of-type {
-        position: absolute;
-        right: 0;
-        textarea {
-          height: rem-calc(443);
-        }
-      }
     }
   }
 
