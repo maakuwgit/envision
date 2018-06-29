@@ -38,18 +38,27 @@
     }
   }
 
-  button,
-  .btn {
-    display: inline-flex;
-    max-width: 50%;
-    flex: 1 0.5 auto;
-    justify-content: center;
-    margin-right: $padding-xsmall/2;
+  @include screen-sm {
+    button,
+    .btn {
+      margin-bottom: $padding-xsmall;
+    }
+  }
 
-    + button,
-    + .btn {
-      margin-right: auto;
-      margin-left: $padding-xsmall/2;
+  @include screen-sm-up {
+    button,
+    .btn {
+      display: inline-flex;
+      max-width: 50%;
+      flex: 1 0.5 auto;
+      justify-content: center;
+      margin-right: $padding-xsmall/2;
+
+      + button,
+      + .btn {
+        margin-right: auto;
+        margin-left: $padding-xsmall/2;
+      }
     }
   }
 

@@ -46,6 +46,99 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "5b3682dcaf8b1": {
+                    "key": "5b3682dcaf8b1",
+                    "name": "image-w-caption",
+                    "label": "Image w\/ Caption",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b3682dcaf8b2",
+                            "label": "Image w\/ Caption",
+                            "name": "image-w-caption",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b3681a3980ee"
+                            ],
+                            "display": "seamless",
+                            "layout": "",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5b36830faf8b3": {
+                    "key": "5b36830faf8b3",
+                    "name": "image-w-content",
+                    "label": "Image w\/ Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b36830faf8b4",
+                            "label": "Image w\/ Content",
+                            "name": "image-w-content",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b36829c170ba"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5b369a12a98aa": {
+                    "key": "5b369a12a98aa",
+                    "name": "lr-block",
+                    "label": "Left \/ Right Blocks",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b369a12a98ab",
+                            "label": "Left \/ Right Blocks",
+                            "name": "lr-block",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b29b32050293"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -100,5 +193,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1530285574
+    "modified": 1530305168
 }

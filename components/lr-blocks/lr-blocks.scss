@@ -1,0 +1,32 @@
+/**
+ * lr-blocks Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-lr-blocks {
+  position: relative;
+  padding-top: $padding-medium;
+  padding-bottom: $padding-medium;
+
+  .lr-blocks__content {
+    position: relative;
+    z-index: 1;
+    padding: $padding-medium;
+    background-color: $teal;
+
+    h2, h3, h4, h5, h6, p, li, time {
+      color: $white;
+    }
+  }
+
+  .lr-blocks__figure {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+}

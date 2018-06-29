@@ -41,7 +41,7 @@ $r_content    = $component_data['r_content'];
 <?php if ( ll_empty( $component_data ) ) return; ?>
 <section class="ll-two-column-w-headline <?php echo implode( " ", $classes ); ?>"<?php echo ' id="' . $id . '"'; ?> data-component="two-column-w-headline">
 
-  <header class="container">
+  <header class="container row">
     <h2><?php echo $title; ?></h2>
   </header><!-- .container -->
 

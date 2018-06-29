@@ -26,13 +26,12 @@ if( have_rows( 'components' ) ) {
           true
         );
       break;
-      case 'lr_blocks' :
-        //ITero Impressionless Scanner, Features section
+      case 'lr-block' :
+        //Home, About Us, all Procedures
         $block = array(
-          'show_steps' => get_sub_field('lr_blocks_show_steps'),
-          'content'    => get_sub_field('lr_blocks_content'),
-          'background' => get_sub_field('lr_blocks_background_image'),
-          'video'      => get_sub_field('lr_blocks_video')
+          'content'  => get_sub_field('lr_blocks_content'),
+          'image'    => get_sub_field('lr_blocks_image'),
+          'style'    => get_sub_field('lr_blocks_style')
         );
 
         $components .= ll_include_component(
@@ -41,7 +40,7 @@ if( have_rows( 'components' ) ) {
           array(),
           true
         );
-      break;
+      break;/*
       case 'call_to_action' :
         //Bottom of most pages above the footer
         $cta = array(
@@ -56,7 +55,7 @@ if( have_rows( 'components' ) ) {
           array(),
           true
         );
-      break;
+      break;*//*
       case 'item_grid' :
         //Meet the Team, “Meet the team section”
         $items = array(
@@ -70,21 +69,35 @@ if( have_rows( 'components' ) ) {
           array(),
           true
         );
-      break;
-      case 'image_grid' :
-        //Early Childhood “Preventative Orthodontic Treatment” section
-        $images = array(
-          'title'  => get_sub_field("image_grid_section_title"),
-          'images' => get_sub_field('image_grid_images')
+      break;*/
+      case 'image-w-caption' :
+        //Home, All Locations
+        $image = array(
+          'image'   => get_sub_field('image_w_caption_image'),
+          'caption' => get_sub_field('image_w_caption_caption')
         );
 
         $components .= ll_include_component(
-          'image-grid',
-          $images,
+          'image-w-caption',
+          $image,
           array(),
           true
         );
       break;
+      case 'image-w-content' :
+        //About Us, Dermafillers
+        $image = array(
+          'image'   => get_sub_field('image_w_content_image'),
+          'content' => get_sub_field('image_w_content_content')
+        );
+
+        $components .= ll_include_component(
+          'image-w-content',
+          $image,
+          array(),
+          true
+        );
+      break;/*
       case 'location_grid' :
         //Home Page, “Currently Located in 3 Cities” section
         $locations = array(
@@ -98,7 +111,7 @@ if( have_rows( 'components' ) ) {
           array(),
           true
         );
-      break;
+      break;*//*
       case 'three_column_content' :
         //Early Childhood “Preventative Orthodontic Treatment” section
         $columns = array(
@@ -112,9 +125,9 @@ if( have_rows( 'components' ) ) {
           array(),
           true
         );
-      break;
+      break;*/
       case 'two-col-w-headline' :
-        //Home Page, “Currently Located in 3 Cities” section
+        //Home, About, all Locations
         $blocks = array(
           'title'     => get_sub_field("two-col-w-headline-title"),
           'l_content' => get_sub_field("two-col-w-headline-l_content"),

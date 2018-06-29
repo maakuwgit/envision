@@ -1,0 +1,43 @@
+/**
+ * image-w-caption Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-image-w-caption {
+  position: relative;
+  overflow: visible;
+  height: 66.6667vh;
+  max-height: 575px;
+  margin-bottom: 20vh;
+
+  * {
+    color: $white;
+  }
+
+  .image-w-caption__caption {
+    position: absolute;
+    bottom: -20vh;
+    left: 8.333333%;
+    z-index: 1;
+    padding: #{rem-calc(96)} #{rem-calc(64)};
+    background-color: $teal;
+
+    p, li, dd {
+
+      &:last-child {
+        margin-bottom: auto;
+      }
+
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: underline;
+    }
+
+  }
+
+}

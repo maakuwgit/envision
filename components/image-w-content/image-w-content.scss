@@ -1,0 +1,62 @@
+/**
+ * image-w-content Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-image-w-content {
+  padding-top: $padding-medium;
+  padding-bottom: $padding-medium;
+
+  @include screen-md {
+
+    .image-w-content__figure {
+      min-height: 320px;
+      margin-bottom: $padding-small;
+    }
+
+  }
+
+  @include screen-lg-up {
+    padding-top: $padding-large;
+    padding-bottom: $padding-large;
+
+    .image-w-content__content {
+      padding-top: $padding-small;
+      padding-bottom: $padding-small;
+    }
+  }
+
+}
+
+.image-w-content__figure {
+  max-width: calc( 50% - #{$padding-xsmall} );
+  margin-right: $padding-xsmall;
+}
+
+.image-w-content__content {
+  padding-top: $padding-xsmall;
+  padding-bottom: $padding-xsmall;
+
+  h2, .h2 {
+    margin-bottom: $padding-xsmall;
+    padding-bottom: $padding-xsmall;
+    border-bottom: solid 1px rgba($teal, 0.1);
+  }
+
+  h3, .h3 {
+    margin-top: rem-calc(33);
+    line-height: 34px;
+    line-height: 1.54545454545455;
+  }
+
+  p {
+    font-weight: $text-light;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+}

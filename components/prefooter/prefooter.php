@@ -73,7 +73,7 @@ if( $image ) {
   <?php if( $title ) : ?>
   <div class="container row">
 
-    <h2 class="prefooter__title text-center col col-md-6of12 col-lg-8of12 col-xl-6of12">
+    <h2 class="prefooter__title text-center col col-md-6of12 col-lg-8of12 col-xl-10of12">
       <?php echo $title; ?>
     </h2><!-- .prefooter__section -->
 
@@ -83,7 +83,7 @@ if( $image ) {
   <?php if( $content ) : ?>
   <div class="container row">
 
-    <div class="prefooter__content text-center col col-md-6of12 col-lg-8of12 col-xl-6of12">
+    <div class="prefooter__content text-center col col-md-6of12 col-lg-8of12 col-xl-10of12">
       <?php echo format_text($content); ?>
     </div><!-- .prefooter__content -->
 

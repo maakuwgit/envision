@@ -119,6 +119,10 @@
   max-width: 100%;
   padding:0 #{$padding-xsmall/2};
 
+  &.end {
+    margin-left: auto;
+  }
+
   @include screen-lg-up {
     padding:0 $padding-xsmall;
   }

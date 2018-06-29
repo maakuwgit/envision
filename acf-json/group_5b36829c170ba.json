@@ -1,17 +1,17 @@
 {
-    "key": "group_5b29b32050293",
-    "title": "Left \/ Right Blocks",
+    "key": "group_5b36829c170ba",
+    "title": "Image w\/ Content",
     "fields": [
         {
-            "key": "field_5b364973c32de",
+            "key": "field_5b36826c22d06",
             "label": "Image",
-            "name": "lr_blocks_image",
+            "name": "image_w_content_image",
             "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "80",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -27,37 +27,15 @@
             "mime_types": ""
         },
         {
-            "key": "field_5b3699521cc37",
-            "label": "Style",
-            "name": "lr_blocks_style",
-            "type": "button_group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "lefty": "Left Side Image",
-                "righty": "Right Side Image"
-            },
-            "allow_null": 0,
-            "default_value": "",
-            "layout": "vertical",
-            "return_format": "value"
-        },
-        {
-            "key": "field_5b364973c323a",
+            "key": "field_5b36829522d07",
             "label": "Content",
-            "name": "lr_blocks_content",
+            "name": "image_w_content_content",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -71,9 +49,16 @@
     "location": [
         [
             {
-                "param": "post_template",
-                "operator": "!=",
-                "value": "templates\/template-form-template.php"
+                "param": "post_type",
+                "operator": "==",
+                "value": "procedure"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "13"
             }
         ]
     ],
@@ -85,5 +70,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1530305797
+    "modified": 1530299115
 }
