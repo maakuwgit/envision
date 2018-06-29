@@ -15,6 +15,11 @@ body.page-template-template-form {
       padding-bottom: $padding-medium;
     }
   }
+
+  .gform_superheader {
+    padding-top: 229px;
+  }
+
   @include screen-lg-up {
     #gform_1 {
       .gfield:last-of-type {

@@ -1,16 +1,12 @@
 .form-skin {
 
-  .gform_heading {
-    padding-top: 229px;
-  }
-
 }
 
 .gform_wrapper {
   @include flexible();
 
   .gform_heading {
-    margin: 229px auto auto auto;
+    margin: auto;
   }
 
 }
@@ -37,6 +33,12 @@
   text-align: center;
 }
 
+.gform_supertitle {
+  padding-top: 229px;
+  margin: auto;
+  color: $silver;
+}
+
 .gform_title {
   @extend %h0;
   margin: auto auto 12px auto;
@@ -45,6 +47,18 @@
 .gform_body {
   width: 50%;
   flex: 0 0.5 auto;
+}
+
+.gform_description {
+  margin-bottom: $padding-small;
+  font-size: rem-calc(16);
+  color: #3f3f3f;
+  line-height: 25px;
+  line-height: 1.5625;
+
+  @include screen-lg-up {
+    margin-bottom: $padding-medium;
+  }
 }
 
 .gfield_error {
