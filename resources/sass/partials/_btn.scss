@@ -18,15 +18,16 @@
   box-shadow: none;
 
   &:hover, &:active, &:focus {
-    background-color: lighten($teal, 25%);
+    background-color: #05C3CB;
   }
 }
 
 %btn--secondary {
+  @extend %btn;
   background-color: $royal;
 
   &:hover, &:active, &:focus {
-    background-color: $navy;
+    background-color: lighten($royal, 15%);
   }
 }
 
@@ -40,5 +41,9 @@ button {
     svg {
       fill: $grey;
     }
+  }
+
+  &.btn--secondary {
+    @extend %btn--secondary;
   }
 }

@@ -1,0 +1,56 @@
+/**
+ * prefooter Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-prefooter {
+  position: relative;
+  overflow: hidden;
+  padding-top: $padding-small;
+  padding-bottom: $padding-small;
+  background-color: $navy;
+
+  @include screen-lg-up {
+    padding-top: $padding-medium;
+    padding-bottom: $padding-medium;
+  }
+
+  .prefooter__title {
+    margin: auto;
+  }
+
+  .prefooter__content {
+
+  }
+
+  h2, h3, h4, h5, h6, p, li {
+    color: $white;
+  }
+
+  p {
+    margin-bottom: $padding-medium * 0.75;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  button,
+  .btn {
+    display: inline-flex;
+    max-width: 50%;
+    flex: 1 0.5 auto;
+    justify-content: center;
+    margin-right: $padding-xsmall/2;
+
+    + button,
+    + .btn {
+      margin-right: auto;
+      margin-left: $padding-xsmall/2;
+    }
+  }
+
+}

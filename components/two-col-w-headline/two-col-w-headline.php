@@ -30,7 +30,7 @@ $classes        = $component_args['classes'] ?: array();
  * @var array
  * @see args['id']
  */
-$component_id   = $component_args['id'];
+$id = ( $component_args['id'] ? $component_args['id'] : uniqid('two-column-w-headline-') );
 
 $title        = $component_data['title'];
 $l_content    = $component_data['l_content'];
@@ -39,7 +39,7 @@ $r_content    = $component_data['r_content'];
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<section class="ll-two-column-w-headline <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="two-column-w-headline">
+<section class="ll-two-column-w-headline <?php echo implode( " ", $classes ); ?>"<?php echo ' id="' . $id . '"'; ?> data-component="two-column-w-headline">
 
   <header class="container">
     <h2><?php echo $title; ?></h2>
