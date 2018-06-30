@@ -97,6 +97,20 @@ if( have_rows( 'components' ) ) {
           array(),
           true
         );
+      break;
+      case 'procedure-grid' :
+        //Home Page, “Currently Located in 3 Cities” section
+        $num_cards = array(
+          'heading'   => get_sub_field("procedure-grid-heading"),
+          'num_cards' => get_sub_field("procedure-grid-num_cards")
+        );
+
+        $components .= ll_include_component(
+          'procedure-grid',
+          $num_cards,
+          array(),
+          true
+        );
       break;/*
       case 'location_grid' :
         //Home Page, “Currently Located in 3 Cities” section

@@ -1,0 +1,53 @@
+/**
+ * procedure-grid Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-procedure-grid {
+  margin-bottom: $padding-medium;
+
+  @include screen-lg-up {
+    margin-bottom: $padding-large;
+  }
+
+  .procedure-grid__procedure {
+    margin: #{$padding-xsmall * 1.5} auto;
+    padding: $padding-small;
+    box-shadow: 0 0 #{rem-calc(10)} 0 rgba($black, 0.14);
+  }
+
+  .procedure-grid__heading {
+    h2 {
+      margin-bottom: rem-calc(20);
+    }
+  }
+
+  .procedure-grid__procedure__body {
+
+    p {
+      margin-top: 0;
+      font-weight: $text-light;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .procedure-grid__procedure__title {
+    font-size: rem-calc(22);
+    line-height: 52px;
+    line-height: 2.36363636363636;
+  }
+
+  .procedure-grid__procedure__cta {
+    display: inline-block;
+    margin-top: rem-calc(42);
+    border-bottom: solid 1px $navy;
+    color: $navy;
+    font-weight: $text-regular;
+  }
+}

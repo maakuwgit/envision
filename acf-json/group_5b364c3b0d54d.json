@@ -139,6 +139,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "5b3785104354f": {
+                    "key": "5b3785104354f",
+                    "name": "procedure-grid",
+                    "label": "Procedure Grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b37851043550",
+                            "label": "Procedure Grid",
+                            "name": "procedure-grid",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b377f54ad1e6"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -193,5 +224,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1530305168
+    "modified": 1530365250
 }
