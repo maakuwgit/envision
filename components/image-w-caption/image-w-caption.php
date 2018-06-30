@@ -53,7 +53,7 @@ if( $image ) {
   <?php endif; ?>
 
   <?php if ( $caption ) : ?>
-    <div class="image-w-caption__caption col col-10of12 end">
+    <div class="image-w-caption__caption col col-md-10of12 col-lg-9of12 col-xl-10of12 end">
       <?php echo $caption; ?>
     </div>
     <!-- .image-w-caption__caption -->

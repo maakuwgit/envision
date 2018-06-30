@@ -11,7 +11,8 @@
   overflow: visible;
   height: 66.6667vh;
   max-height: 575px;
-  margin-bottom: 20vh;
+  margin-top: $padding-medium;
+  margin-bottom: calc( 20vh + #{$padding-large});
 
   * {
     color: $white;
@@ -22,10 +23,15 @@
     bottom: -20vh;
     left: 8.333333%;
     z-index: 1;
-    padding: #{rem-calc(96)} #{rem-calc(64)};
+    padding: #{rem-calc(64)} #{rem-calc(96)};
     background-color: $teal;
 
+    @include screen-lg-only {
+      left: 12.5%;
+    }
+
     p, li, dd {
+      font-weight: $text-light;
 
       &:last-child {
         margin-bottom: auto;

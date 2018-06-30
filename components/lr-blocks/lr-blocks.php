@@ -46,21 +46,21 @@ if( $image ) {
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<section class="ll-lr-blocks<?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="lr-blocks">
+<section class="ll-lr-blocks<?php echo ' ' . $style . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="lr-blocks">
 
   <?php if( $content ) : ?>
-    <div class="lr-blocks__content col col-md-7of12 col-lg-7of12 col-xl-7of12">
+    <div class="lr-blocks__content col col-md-6of12 col-lg-6of12 col-xl-6of12">
       <?php echo $content; ?>
     </div><!-- .lr-block__content -->
   <?php endif; ?>
 
   <?php if( $image ) : ?>
     <figure class="lr-blocks__figure col col-md-7of12 col-lg-7of12 col-xl-7of12"<?php echo $bg;?>>
+
       <div class="lr-blocks__feature feature">
-
       <?php echo ll_format_image($image); ?>
-
       </div><!-- .lr-blocks__feature.feature -->
+
     </figure><!-- .lr-blocks__figure -->
   <?php endif; ?>
 

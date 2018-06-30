@@ -8,25 +8,61 @@
 
 .ll-lr-blocks {
   position: relative;
-  padding-top: $padding-medium;
-  padding-bottom: $padding-medium;
+  padding-top: $padding-medium * 2;
+  padding-bottom: $padding-medium * 2;
+
+  &.lefty {
+
+    .lr-blocks__content {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .lr-blocks__figure {
+      left: 0;
+      right: initial;
+    }
+  }
 
   .lr-blocks__content {
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 448px;
     padding: $padding-medium;
     background-color: $teal;
 
     h2, h3, h4, h5, h6, p, li, time {
       color: $white;
     }
+
+    p, li {
+      font-weight: $text-light;
+    }
+
+    a:not(.btn) {
+      display: inline-block;
+      border-bottom: solid 1px $white;
+      font-weight: $text-regular;
+    }
   }
 
   .lr-blocks__figure {
     position: absolute;
-    top: 0;
+    top: $padding-medium;
     right: 0;
-    bottom: 0;
+    bottom: $padding-medium;
+  }
+
+  @include screen-lg {
+    padding-top: $padding-large * 2;
+    padding-bottom: $padding-large * 2;
+
+    .lr-blocks__figure {
+      top: $padding-large;
+      bottom: $padding-large;
+    }
   }
 
 }
