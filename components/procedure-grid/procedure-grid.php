@@ -58,7 +58,7 @@ $procedures = new WP_Query( $args );
     while( $procedures->have_posts() ) :
 
       $procedures->the_post();
-      $image = get_the_post_thumbnail('thumbnail');
+      $image = get_the_post_thumbnail();
     ?>
 
       <div class="procedure-grid__procedure_wrapper col col-sm-6of12 col-md-3of12 col-lg-4of12 col-xl-4of12">
@@ -66,7 +66,7 @@ $procedures = new WP_Query( $args );
         <div class="procedure-grid__procedure">
 
         <?php if( $image ) : ?>
-          <figure class="procedure-grid__procedure__thumbnail thumbnail" data-background>
+          <figure class="procedure-grid__procedure__thumbnail thumbnail" data-backgrounder>
 
             <div class="procedure-grid__procedure__feature feature">
 

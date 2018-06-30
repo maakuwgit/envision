@@ -41,6 +41,10 @@
     font-size: rem-calc(22);
     line-height: 52px;
     line-height: 2.36363636363636;
+
+    &:first-child {
+      margin-top: 100px;
+    }
   }
 
   .procedure-grid__procedure__cta {
@@ -49,5 +53,29 @@
     border-bottom: solid 1px $navy;
     color: $navy;
     font-weight: $text-regular;
+  }
+
+  .procedure-grid__procedure__thumbnail {
+    position: relative;
+    height: 73px;
+    width: 73px;
+    margin-top: 16px;
+    margin-bottom: 9px;
+    border-radius: 200px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      border-radius: 200px;
+      width: 89px;
+      height: 89px;
+      top: -8px;
+      right: -8px;
+      bottom: -8px;
+      left: -8px;
+      z-index: -1;
+      background-color: $teal;
+      background-image: linear-gradient(to right, rgba(190,199,218,1) 0%, rgba(182,224,227,1) 100%);
+    }
   }
 }
