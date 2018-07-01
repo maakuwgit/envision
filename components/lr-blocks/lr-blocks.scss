@@ -30,8 +30,8 @@
     display: flex;
     flex-wrap: wrap;
     min-height: 448px;
-    padding: $padding-medium;
-    background-color: $teal;
+    padding: $padding-small;
+    background-color: rgba($teal, 0.6);
 
     h2, h3, h4, h5, h6, p, li, time {
       color: $white;
@@ -53,6 +53,18 @@
     top: $padding-medium;
     right: 0;
     bottom: $padding-medium;
+  }
+
+  @include screen-md-up {
+    .lr-blocks__content {
+      background-color: $teal;
+    }
+  }
+
+  @include screen-lg-up {
+    .lr-blocks__content {
+      padding: $padding-medium;
+    }
   }
 
   @include screen-lg {

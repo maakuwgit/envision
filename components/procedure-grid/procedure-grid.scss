@@ -7,10 +7,12 @@
  */
 
 .ll-procedure-grid {
-  margin-bottom: $padding-medium;
+  margin-top: $padding-small;
+  margin-bottom: $padding-small;
 
   @include screen-lg-up {
-    margin-bottom: $padding-large;
+    margin-top: $padding-medium;
+    margin-bottom: $padding-medium;
   }
 
   .procedure-grid__procedure {
@@ -76,6 +78,14 @@
       z-index: -1;
       background-color: $teal;
       background-image: linear-gradient(to right, rgba(190,199,218,1) 0%, rgba(182,224,227,1) 100%);
+    }
+  }
+
+  .procedure-grid__nav {
+    margin: #{rem-calc(20)} auto auto auto;
+
+    .btn {
+      width: rem-calc(236);
     }
   }
 }

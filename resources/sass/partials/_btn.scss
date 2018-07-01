@@ -2,12 +2,12 @@
  * Button Styles
  */
 %btn {
-  display: flex;
+  display: inline-block;
   border: none;
   margin: auto 0;
   padding: #{rem-calc(17)} #{rem-calc(56)};
   border-radius: 200px;
-  background-color: $teal;
+  background-color: $seafoam;
   color: $white;
   outline: none;
   font-weight: $text-medium;
@@ -15,10 +15,11 @@
   line-height: 17px;
   line-height: 1.21428571428571;
   text-transform: uppercase;
+  text-align: center;
   box-shadow: none;
 
   &:hover, &:active, &:focus {
-    background-color: #05C3CB;
+    background-color: darken($seafoam, 5%);
   }
 }
 

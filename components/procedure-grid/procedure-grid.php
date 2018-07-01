@@ -40,7 +40,10 @@ $args = array(
           'showposts'     => $showposts
         );
 
-$procedures = new WP_Query( $args );
+$procedures     = new WP_Query( $args );
+$num_procedures = wp_count_posts('procedure');
+$num_procedures = $num_procedures->publish;
+
 ?>
 
 <?php if ( $procedures->have_posts() ) : ?>
@@ -92,6 +95,12 @@ $procedures = new WP_Query( $args );
 
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
+
+    <?php if( $num_procedures > $showposts && $showposts != -1 ) : ?>
+    <nav class="procedure-grid__nav">
+      <a class="btn" href="<?php echo get_bloginfo('url') . '/procedures'; ?>">View all</a>
+    </nav><!-- .procedure-grid__nav -->
+    <?php endif; ?>
 
   </div><!-- .container.row.centered.between -->
 

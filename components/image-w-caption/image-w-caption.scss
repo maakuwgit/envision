@@ -21,10 +21,21 @@
   .image-w-caption__caption {
     position: absolute;
     bottom: -20vh;
-    left: 8.333333%;
     z-index: 1;
     padding: #{rem-calc(64)} #{rem-calc(96)};
-    background-color: $teal;
+    background-color: rgba($teal, 0.6);
+
+    @include screen-sm {
+      padding: $padding-small;
+    }
+
+    @include screen-md-only {
+      left: 8.333333%;
+    }
+
+    @include screen-md-up {
+      background-color: $teal;
+    }
 
     @include screen-lg-only {
       left: 12.5%;
