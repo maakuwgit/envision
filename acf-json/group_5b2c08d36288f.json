@@ -1,6 +1,6 @@
 {
     "key": "group_5b2c08d36288f",
-    "title": "3 Column w\/ Headline",
+    "title": "Shadowbox w\/ Headline",
     "fields": [
         {
             "key": "field_5b2c0980270a7",
@@ -60,6 +60,28 @@
                     "return_format": "value"
                 }
             ]
+        },
+        {
+            "key": "field_5b3a811998da0",
+            "label": "Number of Columns",
+            "name": "three_column_w_headline_num_columns",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "2": "Two",
+                "3": "Three"
+            },
+            "allow_null": 0,
+            "default_value": 3,
+            "layout": "horizontal",
+            "return_format": "value"
         },
         {
             "key": "field_5b2c091d519b8",
@@ -138,5 +160,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1530556332
+    "modified": 1530561019
 }

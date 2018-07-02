@@ -126,21 +126,22 @@ if( have_rows( 'components' ) ) {
           array(),
           true
         );
-      break;*//*
-      case 'three_column_content' :
-        //Early Childhood “Preventative Orthodontic Treatment” section
+      break;*/
+      case 'three-col-w-headline' :
+        //All Procedures
         $columns = array(
-          'title'  => get_sub_field("three_column_content__section_title"),
-          'columns' => get_sub_field('three_column_content_columns')
+          'title'       => get_sub_field('three_column_w_headline_heading'),
+          'columns'     => get_sub_field('three_column_w_headline_columns'),
+          'num_columns' => get_sub_field('three_column_w_headline_num_columns')
         );
 
         $components .= ll_include_component(
-          'three-col-content',
+          'three-col-w-headline',
           $columns,
           array(),
           true
         );
-      break;*/
+      break;
       case 'two-col-w-headline' :
         //Home, About, all Locations
         $blocks = array(

@@ -50,12 +50,12 @@
                 "5b3a6f51ed228": {
                     "key": "5b3a6f51ed228",
                     "name": "three-col-w-headline",
-                    "label": "3 Column w\/ Headline",
+                    "label": "Shadowbox w\/ Headline",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_5b3a6f51ed229",
-                            "label": "3 Column w\/ Headline",
+                            "label": "Shadowbox w\/ Headline",
                             "name": "three-col-w-headline",
                             "type": "clone",
                             "instructions": "",
@@ -291,7 +291,7 @@
             }
         ]
     ],
-    "menu_order": 1,
+    "menu_order": 3,
     "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
@@ -301,5 +301,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1530557354
+    "modified": 1530562375
 }

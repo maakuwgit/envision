@@ -1,0 +1,49 @@
+/**
+ * three-col-w-headline Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-three-col-w-headline {
+  padding-top: $padding-small;
+  padding-bottom: $padding-small;
+
+  @include screen-lg-up {
+    padding-top: $padding-medium;
+    padding-bottom: $padding-medium;
+
+    &.col-2-up .col {
+      padding-left: 85px;
+      padding-right: 85px;
+    }
+  }
+
+  .three-column-w-headline__header {
+    h2, h3, h4, h5, h6 {
+      @extend %underlined;
+    }
+  }
+
+  .three-column-w-headline__blocks {
+    @extend %card;
+  }
+
+  .three-column-w-headline__block {
+
+    p {
+      margin-top: 0;
+      font-weight: $text-light;
+    }
+
+  }
+
+  .three-column-w-headline__block__title {
+    margin-top: rem-calc(27);
+    margin-bottom: rem-calc(6);
+    line-height: 34px;
+    line-height: 1.54545454545455;
+  }
+
+}

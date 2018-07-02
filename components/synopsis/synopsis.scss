@@ -1,0 +1,38 @@
+/**
+ * synopsis Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-synopsis {
+  padding-top: $padding-small;
+  padding-bottom: $padding-xsmall;
+
+  @include screen-lg-up {
+    padding-top: $padding-medium;
+    padding-bottom: $padding-small;
+  }
+
+  .synopsis__treatment,
+  .synopsis__procedure,
+  .synopsis__recovery {
+    @extend %card;
+    color: #3f3f3f;
+  }
+
+  .synopsis__procedure,
+  .synopsis__recovery {
+    width: 50%;
+    flex: 0 0.5 auto;
+  }
+
+  .synopsis__description {
+
+    p {
+      font-weight: $text-light;
+      color: lighten(#3a3a3a, 30%);
+    }
+  }
+}

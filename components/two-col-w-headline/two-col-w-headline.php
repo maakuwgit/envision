@@ -47,16 +47,15 @@ $r_content    = $component_data['r_content'];
 
   <div class="container row">
 
-
     <div class="two-column-w-headline__block col col-md-6of12 col-lg-6of12 col-xl-6of12">
       <?php echo $l_content; ?>
     </div>
-    <!-- .two-col-w-headline__block -->
+    <!-- .two-column-w-headline__block -->
 
     <div class="two-column-w-headline__block col col-md-6of12 col-lg-6of12 col-xl-6of12">
       <?php echo $r_content; ?>
     </div>
-    <!-- .two-col-w-headline__block -->
+    <!-- .two-column-w-headline__block -->
 
   </div><!-- .container.row -->
 

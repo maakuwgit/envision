@@ -49,6 +49,24 @@
   display: none !important;
 }
 
+%underlined {
+  position: relative;
+  margin: auto;
+  padding-bottom: rem-calc(15);
+
+  &:after {
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 50%;
+    margin: auto;
+    background-color: #EFF1F3;
+  }
+}
+
 /* Font Weights */
 .text-bold,
 .h1.text-bold,
@@ -310,7 +328,7 @@ aside, article, main, div, header, footer, section, nav, main, menu, code, hr {
       display: inline;
       width: 0;
     }
-    
+
   }
 
 }

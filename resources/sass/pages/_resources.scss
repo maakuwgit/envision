@@ -77,21 +77,7 @@
   .resources__resource__body {
 
     h2, h3, h4, h5, h6 {
-      position: relative;
-      display: inline-block;
-      padding-bottom: rem-calc(15);
-
-      &:after {
-        position: absolute;
-        content: '';
-        right: 0;
-        bottom: 0;
-        left: 0;
-        height: 1px;
-        width: 50%;
-        margin: auto;
-        background-color: #EFF1F3;
-      }
+      @extend %underlined;
     }
 
     p {
