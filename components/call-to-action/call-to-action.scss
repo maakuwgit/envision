@@ -1,0 +1,90 @@
+/**
+ * call-to-action Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-call-to-action {
+  background-color: rgba($ivory, 0.4);
+
+  .gform_wrapper {
+    padding-top: $padding-small;
+    padding-bottom: $padding-small;
+
+    @include screen-lg-up {
+      padding-top: $padding-medium;
+      padding-bottom: $padding-medium;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .gform_fields {
+    width: 100%;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .gfield {
+      max-width: 50%;
+      width: calc(50% - #{$padding-small});
+      flex: 0 0.5 auto;
+
+      @include screen-lg-up {
+        width: 100%;
+        padding-left: $grid-column-padding*0.75;
+        padding-right: $grid-column-padding*0.75;
+      }
+
+      input {
+        padding: #{rem-calc(18)} #{rem-calc(18)} #{rem-calc(15)};
+        border-radius: #{rem-calc(4)};
+        font-weight: $text-regular;
+        background-color: $white;
+      }
+    }
+  }
+
+  .gform_heading {
+  }
+
+  .gform_title {
+    font-size: rem-calc(22);
+    line-height: 26px;
+    line-height: 1.18181818181818;
+  }
+
+  .gform_body {
+    width: 80%;
+    display: inline-flex;
+    flex: 0 0.8 auto;
+    margin: auto;
+  }
+
+  .gform_description {
+    margin-bottom: $padding-xsmall;
+
+    @include screen-lg-up {
+    }
+  }
+
+  .gform_footer {
+    display: flex;
+
+    input[type="submit"] {
+      padding-left: rem-calc(69);
+      padding-right: rem-calc(69);
+      font-size: rem-calc(15);
+      line-height: 18px;
+      line-height: 1.2;
+      letter-spacing: 1px;
+    }
+  }
+
+}
