@@ -69,7 +69,7 @@ $num_posts = $num_posts->publish;
           if ($tags) :
             foreach($tags as $tag) : ?>
 
-              <a class="entry__meta_tag" href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
+              <a class="blog-grid__blog__meta" href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
               <!-- .entry__meta_tag -->
 
           <?php
@@ -83,7 +83,7 @@ $num_posts = $num_posts->publish;
 
               if( $category->term_id > 1 ) : ?>
 
-              <a class="entry__meta_category" href="<?php echo get_tag_link($category->term_id); ?>"><?php echo $category->name; ?></a>
+              <a class="blog-grid__blog__meta" href="<?php echo get_tag_link($category->term_id); ?>"><?php echo $category->name; ?></a>
               <!-- .entry__meta_category -->
 
               <?php endif;

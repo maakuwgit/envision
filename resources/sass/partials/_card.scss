@@ -1,0 +1,49 @@
+/**
+ * Card
+ *
+ * Used width grid components ie: Blog Grid, Procedure Grid
+ * A (mostly) square box with a light shadow and gradient headline
+ */
+%card {
+  margin: #{$padding-xsmall * 1.5} auto;
+  padding: $padding-small;
+  box-shadow: 0 0 #{rem-calc(10)} 0 rgba($black, 0.14);
+}
+
+%card__body {
+
+  p {
+    margin-top: 0;
+    font-weight: $text-light;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+%card__title {
+  font-size: rem-calc(22);
+  line-height: 52px;
+  line-height: 2.36363636363636;
+
+  &:first-child {
+    margin-top: 100px;
+  }
+}
+
+%card__cta {
+  display: inline-block;
+  margin-top: rem-calc(42);
+  border-bottom: solid 1px $navy;
+  color: $navy;
+  font-weight: $text-regular;
+}
+
+%card__nav {
+  margin: #{rem-calc(20)} auto auto auto;
+
+  .btn {
+    width: rem-calc(236);
+  }
+}

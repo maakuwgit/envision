@@ -8,4 +8,28 @@
 
 .ll-blog-grid {
 
+  .blog-grid__blog {
+    @extend %card;
+  }
+
+  .blog-grid__blog__supertitle {
+
+  }
+
+  .blog-grid__blog__title {
+    @extend %card__title;
+  }
+
+  .blog-grid__blog__body {
+    @extend %card__body;
+  }
+
+  .blog-grid__blog__meta {
+
+  }
+
+  .blog__excerpt__more {
+    @extend %card__cta;
+  }
+
 }

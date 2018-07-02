@@ -15,66 +15,46 @@
     margin-bottom: $padding-medium;
   }
 
-  .procedure-grid__procedure {
-    margin: #{$padding-xsmall * 1.5} auto;
-    padding: $padding-small;
-    box-shadow: 0 0 #{rem-calc(10)} 0 rgba($black, 0.14);
-  }
-
   .procedure-grid__heading {
     h2 {
       margin-bottom: rem-calc(20);
     }
   }
 
+  .procedure-grid__procedure {
+    @extend %card;
+  }
+
   .procedure-grid__procedure__body {
-
-    p {
-      margin-top: 0;
-      font-weight: $text-light;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
+    @extend %card__body;
   }
 
   .procedure-grid__procedure__title {
-    font-size: rem-calc(22);
-    line-height: 52px;
-    line-height: 2.36363636363636;
-
-    &:first-child {
-      margin-top: 100px;
-    }
+    @extend %card__title;
   }
 
   .procedure-grid__procedure__cta {
-    display: inline-block;
-    margin-top: rem-calc(42);
-    border-bottom: solid 1px $navy;
-    color: $navy;
-    font-weight: $text-regular;
+    @extend %card__cta;
   }
 
   .procedure-grid__procedure__thumbnail {
     position: relative;
-    height: 73px;
-    width: 73px;
-    margin-top: 16px;
-    margin-bottom: 9px;
+    height: rem-calc(73);
+    width: rem-calc(73);
+    margin-top: rem-calc(16);
+    margin-bottom: rem-calc(9);
     border-radius: 200px;
 
     &:before {
       content: '';
       position: absolute;
       border-radius: 200px;
-      width: 89px;
-      height: 89px;
-      top: -8px;
-      right: -8px;
-      bottom: -8px;
-      left: -8px;
+      width: rem-calc(89);
+      height: rem-calc(89);
+      top: rem-calc(-8);
+      right: rem-calc(-8);
+      bottom: rem-calc(-8);
+      left: rem-calc(-8);
       z-index: -1;
       background-color: $teal;
       background-image: linear-gradient(to right, rgba(190,199,218,1) 0%, rgba(182,224,227,1) 100%);
@@ -82,10 +62,6 @@
   }
 
   .procedure-grid__nav {
-    margin: #{rem-calc(20)} auto auto auto;
-
-    .btn {
-      width: rem-calc(236);
-    }
+    @extend %card__nav;
   }
 }
