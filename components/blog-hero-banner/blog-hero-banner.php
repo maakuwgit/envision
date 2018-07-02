@@ -33,7 +33,7 @@ $classes        = $component_args['classes'] ?: array();
  * @var array
  * @see args['id']
  */
-$id = ( $component_args['id'] ? $component_args['id'] : uniqid('hero-banner-') );
+$id = ( $component_args['id'] ? $component_args['id'] : uniqid('blog-hero-banner-') );
 
 $heading            = $component_data['heading']['text'];
 $heading_tag        = $component_data['heading']['tag'];
