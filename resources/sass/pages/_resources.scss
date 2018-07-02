@@ -1,0 +1,103 @@
+/**
+ * blog-grid Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.page-template-template-resources {
+
+  .resources {
+    padding-bottom: $padding-medium;
+
+    @include screen-lg-up {
+      padding-bottom: $padding-large;
+    }
+
+  }
+
+  .resources__resource__list {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $padding-small * 1.25;
+
+    @include screen-lg-up {
+      margin-bottom: $padding-medium * 1.25;
+    }
+  }
+
+  .resources__resource__item {
+    @include flexible;
+    @extend %card;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: $padding-xsmall;
+    padding-right: $padding-xsmall;
+  }
+
+  .resources__resource__anchor {
+    line-height: 21px;
+    line-height: 1.3125;
+    font-weight: $text-regular;
+  }
+
+  .resources__resource__icon {
+    position: relative;
+    height: rem-calc(58);
+    width: rem-calc(58);
+    margin-right: rem-calc(16);
+    border-radius: 200px;
+    color: $white;
+    background-color: rgba(0,149,155,0.5);
+
+    &:before {
+      content: '';
+      position: absolute;
+      border-radius: 200px;
+      width: rem-calc(50);
+      height: rem-calc(50);
+      top: rem-calc(4);
+      right: rem-calc(4);
+      bottom: rem-calc(4);
+      left: rem-calc(4);
+      z-index: -1;
+      background-color: $teal;
+    }
+
+    .icon {
+      width: rem-calc(58);
+      margin-top: rem-calc(16);
+    }
+  }
+
+  .resources__resource__body {
+
+    h2, h3, h4, h5, h6 {
+      position: relative;
+      display: inline-block;
+      padding-bottom: rem-calc(15);
+
+      &:after {
+        position: absolute;
+        content: '';
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 50%;
+        margin: auto;
+        background-color: #EFF1F3;
+      }
+    }
+
+    p {
+      font-weight: $text-light;
+      color: #3f3f3f;
+    }
+  }
+
+}

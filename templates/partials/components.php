@@ -102,7 +102,8 @@ if( have_rows( 'components' ) ) {
         //Home Page, “Currently Located in 3 Cities” section
         $num_cards = array(
           'heading'   => get_sub_field("procedure-grid-heading"),
-          'num_cards' => get_sub_field("procedure-grid-num_cards")
+          'num_cards' => get_sub_field("procedure-grid-num_cards"),
+          'post__in'  => get_sub_field("procedure-grid-specific_posts")
         );
 
         $components .= ll_include_component(

@@ -37,7 +37,7 @@ $num_posts = $num_posts->publish;
 <?php if ( have_posts() ) : ?>
 <section class="ll-blog-grid <?php echo implode( " ", $classes ); ?>"<?php echo ' id="'.$id.'"'; ?> data-component="blog-grid">
 
-  <div class="container row centered between">
+  <div class="container row centered start">
 
   <?php
   while( have_posts() ) :
@@ -47,10 +47,10 @@ $num_posts = $num_posts->publish;
 
       <div class="blog-grid__blog_wrapper col col-sm-6of12 col-md-3of12 col-lg-4of12 col-xl-4of12">
 
-        <div class="blog-grid__blog">
+        <div class="blog-grid__blog" data-clickthrough>
 
         <?php if( $image ) : ?>
-          <figure class="blog-grid__blog__thumbnail thumbnail" data-backgrounder>
+          <figure class="blog-grid__blog__feature__wrapper" data-backgrounder>
 
             <div class="blog-grid__blog__feature feature">
 
@@ -69,7 +69,7 @@ $num_posts = $num_posts->publish;
           if ($tags) :
             foreach($tags as $tag) : ?>
 
-              <a class="blog-grid__blog__meta" href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
+              <span class="blog-grid__blog__meta" href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></span>
               <!-- .entry__meta_tag -->
 
           <?php
@@ -80,21 +80,21 @@ $num_posts = $num_posts->publish;
           if ($categories) :
 
             foreach($categories as $category) :
+          ?>
 
-              if( $category->term_id > 1 ) : ?>
-
-              <a class="blog-grid__blog__meta" href="<?php echo get_tag_link($category->term_id); ?>"><?php echo $category->name; ?></a>
+              <span class="blog-grid__blog__meta" href="<?php echo get_tag_link($category->term_id); ?>"><?php echo $category->name; ?></span>
               <!-- .entry__meta_category -->
 
-              <?php endif;
-
+              <?php
             endforeach;
 
           endif;
           ?>
           </h3>
           <!-- .blog-grid__blog__title -->
-          <h4 class="blog-grid__blog__title"><?php echo the_title(); ?></h4>
+          <h4 class="blog-grid__blog__title">
+            <a href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a>
+          </h4>
           <!-- .blog-grid__blog__title -->
           <div class="blog-grid__blog__body">
             <?php the_excerpt(); ?>
@@ -104,11 +104,13 @@ $num_posts = $num_posts->publish;
         </div>
 
       </div><!-- .blog-grid__blog -->
+
     <?php if( $num_posts > $showposts && $showposts != -1 ) : ?>
     <nav class="blog-grid__nav">
       <a class="btn" href="<?php echo get_bloginfo('url') . '/blogs'; ?>">View all</a>
     </nav><!-- .blog-grid__nav -->
     <?php endif; ?>
+
   <?php endwhile; ?>
 
   </div><!-- .container.row.centered.between -->

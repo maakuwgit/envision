@@ -88,6 +88,24 @@
         $(target).slideToggle();
       });
 
+
+      /*
+       * Convert any element into a giant button
+       */
+      function clickthrough(e) {
+        var target = $(this).find('a:first-of-type');
+        e.preventDefault();
+        if(target && target.length > 0){
+          document.location.href = target.attr('href');
+        }else{
+          document.location.href = $(this).attr('data-clickthrough');
+        }
+      }
+
+      $('[data-clickthrough]').each(function(args){
+        $(this).on('click.clickthrough', clickthrough);
+      });
+
       $(document).click(function(e) {
           //close all [data-toggle="collapse"] elements if
           //target doesn't have any data attributes defined or

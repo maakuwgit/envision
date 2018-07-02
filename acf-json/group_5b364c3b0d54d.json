@@ -47,6 +47,37 @@
                     "min": "",
                     "max": ""
                 },
+                "5b3a6f51ed228": {
+                    "key": "5b3a6f51ed228",
+                    "name": "three-col-w-headline",
+                    "label": "3 Column w\/ Headline",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b3a6f51ed229",
+                            "label": "3 Column w\/ Headline",
+                            "name": "three-col-w-headline",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b2c08d36288f"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "5b38fd7c8184e": {
                     "key": "5b38fd7c8184e",
                     "name": "call-to-action",
@@ -228,6 +259,11 @@
                 "param": "page",
                 "operator": "==",
                 "value": "17"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "templates\/template-resources.php"
             }
         ],
         [
@@ -235,6 +271,11 @@
                 "param": "page",
                 "operator": "==",
                 "value": "13"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "templates\/template-resources.php"
             }
         ],
         [
@@ -242,6 +283,11 @@
                 "param": "page",
                 "operator": "==",
                 "value": "5"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "templates\/template-resources.php"
             }
         ]
     ],
@@ -255,5 +301,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1530461519
+    "modified": 1530557354
 }

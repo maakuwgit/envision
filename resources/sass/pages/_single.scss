@@ -2,4 +2,8 @@
  * Single (Global)
  */
 .single {
+
+  .hentry:first-child {
+    padding-top: 100px;
+  }
 }

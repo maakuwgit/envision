@@ -43,6 +43,13 @@
                 "operator": "==",
                 "value": "235"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "templates\/template-resources.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -53,5 +60,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530298286
+    "modified": 1530545491
 }

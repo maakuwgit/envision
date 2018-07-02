@@ -7,8 +7,9 @@
 */
 
 $defaults = [
-  'heading'    => false,
-  'num_cards' => -1
+  'heading'   => false,
+  'num_cards' => -1,
+  'post__in'  => -1
 ];
 
 $component_data = ll_parse_args( $component_data, $defaults );
@@ -32,10 +33,12 @@ $classes        = $component_args['classes'] ?: array();
 $component_id   = $component_args['id'];
 $heading        = $component_data['heading'];
 $showposts      = $component_data['num_cards'];
+$post__in       = $component_data['posts'];
 
 $args = array(
           'post_type'     => 'procedure',
           'post_status'   => 'publish',
+          'post__in'      => $post__in,
           'order'         => 'ASC',
           'showposts'     => $showposts
         );

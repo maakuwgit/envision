@@ -30,6 +30,11 @@
   &:first-child {
     margin-top: 100px;
   }
+
+  a {
+    font-size: inherit;
+    font-weight: inherit;
+  }
 }
 
 %card__cta {

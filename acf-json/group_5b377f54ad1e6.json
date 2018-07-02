@@ -41,38 +41,46 @@
             "min": -1,
             "max": 12,
             "step": ""
+        },
+        {
+            "key": "field_5b3a6c66f4651",
+            "label": "Procedures",
+            "name": "procedure-grid-specific_posts",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "procedure"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page",
                 "operator": "==",
-                "value": "location"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "procedure"
-            }
-        ],
-        [
-            {
-                "param": "post_template",
-                "operator": "==",
-                "value": "templates\/template-home.php"
+                "value": "235"
             }
         ]
     ],
-    "menu_order": 0,
-    "position": "normal",
+    "menu_order": 2,
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 0,
+    "active": 1,
     "description": "",
-    "modified": 1530370783
+    "modified": 1530557457
 }
