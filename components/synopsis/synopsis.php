@@ -59,16 +59,20 @@ $recovery    = $component_data['recovery'];
 
     <div class="synopsis__col col col-md-6of12 col-lg-6of12 col-xl-6of12 center">
 
-      <div class="row">
+      <div class="row between">
       <?php if( $application ) : ?>
         <div class="synopsis__treatment" data-clickable>
 
           <svg class="icon icon-download">
             <use xlink:href="#icon-download"></use>
           </svg>
-          <span class="synopsis__treatment__description"><?php echo $application; ?></span>
 
-        </div>
+          <div class="synopsis__treatment__description">
+            <h4>What It Treats</h4>
+            <?php echo format_text($application); ?>
+          </div><!-- .synopsis__treatment__description -->
+
+        </div><!-- .synopsis__treatment -->
       <?php endif; ?>
 
       <?php if( $procedure ) : ?>
@@ -77,9 +81,13 @@ $recovery    = $component_data['recovery'];
           <svg class="icon icon-download">
             <use xlink:href="#icon-download"></use>
           </svg>
-          <span class="synopsis__procedure__description"><?php echo $procedure; ?></span>
 
-        </div>
+          <div class="synopsis__procedure__description">
+            <h4>Procedure Time</h4>
+            <?php echo format_text($procedure); ?>
+          </div><!-- .synopsis__procedure__description -->
+
+        </div><!-- .synopsis__procedure -->
       <?php endif; ?>
 
       <?php if( $recovery ) : ?>
@@ -88,10 +96,15 @@ $recovery    = $component_data['recovery'];
           <svg class="icon icon-download">
             <use xlink:href="#icon-download"></use>
           </svg>
-          <span class="synopsis__recovery__description"><?php echo $recovery; ?></span>
 
-        </div>
+          <div class="synopsis__recovery__description">
+            <h4>Recovery Time</h4>
+            <?php echo format_text($recovery); ?>
+          </div><!-- .synopsis__recovery__description -->
+
+        </div><!-- .synopsis__recovery -->
       <?php endif; ?>
+
       </div><!-- .row -->
 
     </div><!-- .synopsis__col -->

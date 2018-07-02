@@ -19,13 +19,42 @@
   .synopsis__procedure,
   .synopsis__recovery {
     @extend %card;
+    margin-top: $padding-xsmall;
+    margin-bottom: $padding-xsmall;
     color: #3f3f3f;
+
+    h4 {
+      padding-bottom: rem-calc(8);
+      font-size: rem-calc(16);
+      line-height: 21px;
+      line-height: 1.3125;
+    }
+
+    p {
+      margin-top: 0;
+      line-height: 21px;
+      line-height: 1.3125;
+      color: #3f3f3f;
+      font-weight: $text-light;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .synopsis__procedure,
   .synopsis__recovery {
-    width: 50%;
+    width: calc(50% - #{$padding-xsmall});
     flex: 0 0.5 auto;
+  }
+
+  .synopsis__procedure {
+    margin-left: 0;
+  }
+
+  .synopsis__recovery {
+    margin-right: 0;
   }
 
   .synopsis__description {
