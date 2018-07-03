@@ -35,6 +35,9 @@ $classes        = $component_args['classes'] ?: array();
  */
 $id = ( $component_args['id'] ? $component_args['id'] : uniqid('hero-banner-') );
 
+/**
+ * ACF values pulled into the component from the components.php partial.
+ */
 $heading            = $component_data['heading']['text'];
 $heading_tag        = $component_data['heading']['tag'];
 $subheading         = $component_data['subheading']['text'];

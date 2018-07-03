@@ -32,6 +32,9 @@ $classes        = $component_args['classes'] ?: array();
  */
 $id = ( $component_args['id'] ? $component_args['id'] : uniqid('two-column-w-headline-') );
 
+/**
+ * ACF values pulled into the component from the components.php partial.
+ */
 $title        = $component_data['title'];
 $l_content    = $component_data['l_content'];
 $r_content    = $component_data['r_content'];

@@ -55,6 +55,19 @@ if( have_rows( 'components' ) ) {
           true
         );
       break;*/
+      case 'image-slider' :
+        //Home, All Procedures
+        $slides = array(
+          'slides'   => get_sub_field('image_slider_images')
+        );
+
+        $components .= ll_include_component(
+          'image-slider',
+          $slides,
+          array(),
+          true
+        );
+      break;
       case 'image-w-caption' :
         //Home, All Locations
         $image = array(

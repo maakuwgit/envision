@@ -33,6 +33,9 @@ $classes        = $component_args['classes'] ?: array();
  */
 $id = ( $component_args['id'] ? $component_args['id'] : uniqid('prefooter-') );
 
+/**
+ * ACF values pulled into the component from the components.php partial.
+ */
 $title          = $component_data['title'];
 $content        = $component_data['content'];
 $image          = $component_data['image'];

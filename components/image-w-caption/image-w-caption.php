@@ -31,6 +31,9 @@ $classes        = $component_args['classes'] ?: array();
  */
 $id = ( $component_args['id'] ? $component_args['id'] : uniqid('image-w-caption-') );
 
+/**
+ * ACF values pulled into the component from the components.php partial.
+ */
 $image              = $component_data['image'];
 $caption            = $component_data['caption'];
 

@@ -31,6 +31,10 @@ $classes        = $component_args['classes'] ?: array();
  * @see args['id']
  */
 $component_id   = $component_args['id'];
+
+/**
+ * ACF values pulled into the component from the components.php partial.
+ */
 $heading        = $component_data['heading'];
 $showposts      = $component_data['num_cards'];
 $post__in       = $component_data['posts'];

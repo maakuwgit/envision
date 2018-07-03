@@ -32,6 +32,9 @@ $classes        = $component_args['classes'] ?: array();
  */
 $id = ( $component_args['id'] ? $component_args['id'] : uniqid('three-column-w-headline-') );
 
+/**
+ * ACF values pulled into the component from the components.php partial.
+ */
 $title        = $component_data['title'];
 $columns      = $component_data['columns'];
 $num_columns  = $component_data['num_columns'];
@@ -40,7 +43,7 @@ $colspan = 12 / $num_columns;
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<div class="ll-three-col-w-headline <?php echo 'col-' . $num_columns . '-up';?> <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="three-col-w-headline">
+<section class="ll-three-col-w-headline <?php echo 'col-' . $num_columns . '-up';?> <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="three-col-w-headline">
 
 <?php if( $title ) : ?>
   <header class="three-column-w-headline__header container row centered">
@@ -64,4 +67,4 @@ $colspan = 12 / $num_columns;
 
   </div><!-- .container.row.start -->
 
-</div>
+</section>

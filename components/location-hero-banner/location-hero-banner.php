@@ -33,7 +33,7 @@ $classes        = $component_args['classes'] ?: array();
 $id               = ( $component_args['id'] ? $component_args['id'] : uniqid('location-hero-') );
 
 /**
- * ACF values pulled into the component fromt the components.php partial.
+ * ACF values pulled into the component from the components.php partial.
  */
 $heading          = $component_data['heading']['text'];
 $heading_tag      = $component_data['heading']['tag'];

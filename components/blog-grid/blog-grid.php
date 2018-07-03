@@ -29,6 +29,10 @@ $classes        = $component_args['classes'] ?: array();
  * @see args['id']
  */
 $id = ( $component_args['id'] ? $component_args['id'] : uniqid('blog-grid-') );
+
+/**
+ * ACF values pulled into the component from the components.php partial.
+ */
 $showposts = $component_data['num_posts'];
 $num_posts = wp_count_posts();
 $num_posts = $num_posts->publish;

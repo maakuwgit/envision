@@ -29,6 +29,10 @@ $classes        = $component_args['classes'] ?: array();
  * @see args['id']
  */
 $component_id   = $component_args['id'];
+
+/**
+ * ACF values pulled into the component from the components.php partial.
+ */
 $form_id        = $component_data['form_id'];
 ?>
 
