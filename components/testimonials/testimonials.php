@@ -102,6 +102,7 @@ $num_testimonials = $num_testimonials->publish;
 
             <?php $first_css = ''; ?>
           <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
         </div><!-- .testimonials__authors -->
 
       </div><!-- .testimonials__list -->
