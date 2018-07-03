@@ -11,7 +11,6 @@
   main .content > .container:first-of-type {
     padding-top: rem-calc(200);
     padding-bottom: rem-calc(176);
-    //min-height: calc( 100vh - #{rem-calc(200)} - #{rem-calc(176)})
   }
 
   .vac {
@@ -22,6 +21,7 @@
   }
 
   .vac__content {
+    display: flex;
     text-align: left;
 
     p {
@@ -30,6 +30,8 @@
   }
 
   .vac__content__wrapper {
+    display: flex;
+    flex-wrap: wrap;
     max-width: none;
     margin-left: 0;
   }
@@ -46,6 +48,32 @@
     &:after {
       content: initial;
       position: initial;
+    }
+  }
+
+  .vac__button {
+    margin-bottom: 0;
+  }
+
+  .button {
+    @extend %btn;
+    font-size: rem-calc(15);
+    line-height: 18px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+
+    &[data-type] {
+      padding-right: $padding-xsmall;
+      padding-left: $padding-xsmall;
+    }
+    &[data-type="woman"] {
+      margin-left: $padding-xsmall;
+    }
+
+    &.active {
+      background-color: $grey;
+      fill: $black;
+      color: $black;
     }
   }
 
