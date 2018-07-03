@@ -1,0 +1,45 @@
+{
+    "key": "group_5b3badc6470a7",
+    "title": "Team Grid",
+    "fields": [
+        {
+            "key": "field_5b3badd1994ba",
+            "label": "Number of Members",
+            "name": "num_members",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": 4,
+            "prepend": "",
+            "append": "",
+            "min": -1,
+            "max": 12,
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1530637839
+}

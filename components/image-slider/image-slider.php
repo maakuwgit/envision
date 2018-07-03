@@ -7,6 +7,7 @@
 */
 
 $defaults = [
+  'supertitle'  => false,
   'heading'     => false,
   'subheading'  => false,
   'slides'      => false
@@ -36,6 +37,7 @@ $id               = ( $component_args['id'] ? $component_args['id'] : uniqid('im
  * ACF values pulled into the component from the components.php partial.
  */
 $slides     = $component_data['slides'];
+$supertitle = $component_data['supertitle'];
 $heading    = $component_data['heading'];
 $subheading = $component_data['subheading'];
 
@@ -48,6 +50,10 @@ $subheading = $component_data['subheading'];
 
     <?php if( $heading || $subheading ) : ?>
       <header class="image-slider__heading col text-center">
+
+        <?php if( $supertitle ) : ?>
+        <h1 class="image-slider__supertitle"><?php echo $supertitle; ?></h1>
+        <?php endif; ?>
 
         <?php if( $heading ) : ?>
         <<?php echo $heading['tag']; ?>><?php echo $heading['text']; ?></<?php echo $heading['tag']; ?>>

@@ -1,0 +1,77 @@
+/**
+ * image-grid Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-image-grid {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+  }
+
+  .image-grid__items {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc( 100% + #{$grid-column-padding*4} );
+    margin-right: $grid-column-padding * -2;
+    margin-left: $grid-column-padding * -2;
+  }
+
+  .image-grid__item {
+    @extend %card;
+    height: rem-calc(120);
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+    width: calc( 100% - #{$grid-column-padding*2} );
+    align-items: center;
+    list-style: none;
+    margin: $grid-column-padding;
+    padding: #{rem-calc(31)} #{rem-calc(22)};
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include screen-sm-only {
+      flex: 0 0.5 auto;
+      width: calc( 50% - #{$grid-column-padding*2} );
+    }
+
+    @include screen-md-only {
+      flex: 0 0.33 auto;
+      width: calc( 33.33334% - #{$grid-column-padding*2} );
+    }
+
+    @include screen-lg-up {
+      flex: 0 0.25 auto;
+      width: calc( 25% - #{$grid-column-padding*2} );
+    }
+  }
+
+  .image-grid__heading {
+    margin-left: auto;
+    margin-bottom: rem-calc(48);
+  }
+
+  .image-grid__content {
+    width: 100%;
+  }
+
+  .image-grid__content__caption {
+    margin-left: rem-calc(74);
+    font-size: rem-calc(16);
+    line-height: 21px;
+    line-height: 1.3125;
+    font-weight: $text-regular;
+    color: $teal;
+  }
+}

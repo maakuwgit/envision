@@ -1,0 +1,29 @@
+/**
+ * team-grid Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-team-grid {
+
+  .team-grid__heading {
+    display: inline-flex;
+    @extend %underlined;
+  }
+
+  [data-backgrounder] {
+    height: rem-calc(255);
+    width: 100%;
+  }
+
+  .team-grid__item {
+
+    .thumbnail {
+      width: 100%;
+      min-height: rem-calc(299);
+    }
+  }
+
+}

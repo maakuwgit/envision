@@ -80,12 +80,43 @@
                 },
                 "5b3682dcaf8b1": {
                     "key": "5b3682dcaf8b1",
+                    "name": "image-grid",
+                    "label": "Image Grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b3682dcaf8b2",
+                            "label": "Image Grid",
+                            "name": "image-grid",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b2a937793a91"
+                            ],
+                            "display": "seamless",
+                            "layout": "",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5b3bae67a8987": {
+                    "key": "5b3bae67a8987",
                     "name": "image-w-caption",
                     "label": "Image w\/ Caption",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5b3682dcaf8b2",
+                            "key": "field_5b3bae67a8988",
                             "label": "Image w\/ Caption",
                             "name": "image-w-caption",
                             "type": "clone",
@@ -101,7 +132,7 @@
                                 "group_5b3681a3980ee"
                             ],
                             "display": "seamless",
-                            "layout": "",
+                            "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
                         }
@@ -266,12 +297,43 @@
                 },
                 "5b3ad31d00d6c": {
                     "key": "5b3ad31d00d6c",
+                    "name": "team-grid",
+                    "label": "Team Grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b3ad31d00d6d",
+                            "label": "Team Grid",
+                            "name": "team-grid",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b3badc6470a7"
+                            ],
+                            "display": "seamless",
+                            "layout": "",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5b3bae1f86ead": {
+                    "key": "5b3bae1f86ead",
                     "name": "testimonial",
                     "label": "Testimonial",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5b3ad31d00d6d",
+                            "key": "field_5b3bae1f86eae",
                             "label": "Testimonial",
                             "name": "testimonial",
                             "type": "clone",
@@ -363,5 +425,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1530629000
+    "modified": 1530637947
 }

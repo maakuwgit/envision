@@ -8,12 +8,28 @@
 
 .ll-image-slider {
   position: relative;
+  padding-bottom: $padding-medium;
+
+  @include screen-lg-up {
+    padding-bottom: $padding-large;
+  }
+
+  .image-slider__supertitle {
+    @extend %supertitle;
+  }
 
   .image-slider__heading {
 
+    h1 + h2 {
+      @extend %title
+    }
+
     h2 {
       display: inline-flex;
-      @extend %underlined;
+
+      &:first-child {
+        @extend %underlined;
+      }
     }
 
     p {

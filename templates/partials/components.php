@@ -40,21 +40,34 @@ if( have_rows( 'components' ) ) {
           array(),
           true
         );
-      break;/*
-      case 'item_grid' :
-        //Meet the Team, “Meet the team section”
-        $items = array(
-          'title' => get_sub_field('item_grid_section_title'),
-          'items' => get_sub_field('item_grid_items')
+      break;
+      case 'image-grid' :
+        //About Us”
+        $images = array(
+          'heading' => get_sub_field('image-grid_heading'),
+          'images'  => get_sub_field('image_grid_images')
         );
 
         $components .= ll_include_component(
-          'item-grid',
-          $items,
+          'image-grid',
+          $images,
           array(),
           true
         );
-      break;*/
+      break;
+      case 'team-grid' :
+        //About Us”
+        $members = array(
+          'num_members'  => get_sub_field('num_members')
+        );
+
+        $components .= ll_include_component(
+          'team-grid',
+          $members,
+          array(),
+          true
+        );
+      break;
       case 'image-slider' :
         //Home, All Procedures
         $slides = array(
