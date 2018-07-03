@@ -59,9 +59,9 @@ $members = new WP_Query( $args );
 
     $positions  = get_the_terms(get_the_ID(), 'position');
   ?>
-    <li class="team-grid__item col-4of12">
+    <li class="team-grid__item col-3of12">
 
-      <figure id="<?php echo basename(get_permalink()); ?>" class="thumbnail" data-clickthrough>
+      <figure id="<?php echo basename(get_permalink()); ?>" class="team-grid__thumb__figure" data-clickthrough>
         <a href="<?php the_permalink(); ?>" class="hide"></a>
 
         <div class="team-grid__thumb__image" data-backgrounder>
