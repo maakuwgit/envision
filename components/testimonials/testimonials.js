@@ -1,14 +1,14 @@
 /**
-* backgrounder JS
+* testimonials JS
 * -----------------------------------------------------------------------------
 *
-* All the JS for the backgrounder component.
+* All the JS for the testimonials component.
 */
 ( function( app ) {
 
   var COMPONENT = {
 
-    className: 'll-backgrounder',
+    className: 'll-testimonials',
 
 
     selector : function() {
@@ -31,5 +31,5 @@
   };
 
   // Hooks the component into the app
-  app.registerComponent( 'backgrounder', COMPONENT );
+  app.registerComponent( 'testimonials', COMPONENT );
 } )( app );

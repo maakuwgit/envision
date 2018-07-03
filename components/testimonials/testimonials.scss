@@ -1,0 +1,73 @@
+/**
+ * testimonials Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-testimonials {
+  margin-top: $padding-small;
+  margin-bottom: $padding-medium;
+
+  @include screen-lg-up {
+    margin-top: $padding-medium;
+    margin-bottom: $padding-large;
+  }
+
+  .testimonials__heading {
+
+  }
+
+  .testimonials__description {
+    display: none;
+    margin-bottom: $padding-small;
+
+    &.active {
+      display: block;
+    }
+
+    p {
+      text-align: center;
+      font-size: rem-calc(16);
+      font-weight: $text-light;
+      line-height: 25px;
+      line-height: 1.5625;
+    }
+
+    *:last-child {
+      margin-bottom: auto;
+    }
+  }
+
+  .testimonials__list {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .testimonials__authors {
+  }
+
+  .testimonials__author {
+    display: inline-flex;
+    font-size: rem-calc(16);
+    font-weight: $text-regular;
+    line-height: 28px;
+    line-height: 1.5625;
+
+    .testimonials__author_name {
+      display: none;
+      align-self: center;
+      margin-right: rem-calc(23);
+    }
+
+    &.active {
+
+      .testimonials__author_name {
+        display: inline;
+      }
+    }
+  }
+
+}

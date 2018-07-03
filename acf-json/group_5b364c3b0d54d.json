@@ -47,37 +47,6 @@
                     "min": "",
                     "max": ""
                 },
-                "5b3a6f51ed228": {
-                    "key": "5b3a6f51ed228",
-                    "name": "three-col-w-headline",
-                    "label": "Shadowbox w\/ Headline",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5b3a6f51ed229",
-                            "label": "Shadowbox w\/ Headline",
-                            "name": "three-col-w-headline",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_5b2c08d36288f"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "5b38fd7c8184e": {
                     "key": "5b38fd7c8184e",
                     "name": "call-to-action",
@@ -232,6 +201,68 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "5b3a6f51ed228": {
+                    "key": "5b3a6f51ed228",
+                    "name": "three-col-w-headline",
+                    "label": "Shadowbox w\/ Headline",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b3a6f51ed229",
+                            "label": "Shadowbox w\/ Headline",
+                            "name": "three-col-w-headline",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b2c08d36288f"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5b3ad31d00d6c": {
+                    "key": "5b3ad31d00d6c",
+                    "name": "testimonial",
+                    "label": "Testimonial",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b3ad31d00d6d",
+                            "label": "Testimonial",
+                            "name": "testimonial",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b3ad16a6985e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -301,5 +332,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1530562375
+    "modified": 1530581849
 }

@@ -1,0 +1,52 @@
+{
+    "key": "group_5b3ad16a6985e",
+    "title": "Testimonials",
+    "fields": [
+        {
+            "key": "field_5b3ad176db7e4",
+            "label": "Number of Testimonials",
+            "name": "num_testimonials",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": 3,
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 6,
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "procedure"
+            }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "templates\/template-home.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1530581679
+}

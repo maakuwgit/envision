@@ -41,21 +41,6 @@ if( have_rows( 'components' ) ) {
           true
         );
       break;/*
-      case 'call_to_action' :
-        //Bottom of most pages above the footer
-        $cta = array(
-          'show_logo' => get_sub_field('cta_show_logo'),
-          'title' => get_sub_field('cta_section_title'),
-          'content' => get_sub_field('cta_content')
-        );
-
-        $components .= ll_include_component(
-          'call-to-action',
-          $cta,
-          array(),
-          true
-        );
-      break;*//*
       case 'item_grid' :
         //Meet the Team, “Meet the team section”
         $items = array(
@@ -127,6 +112,19 @@ if( have_rows( 'components' ) ) {
           true
         );
       break;*/
+      case 'testimonial' :
+        //All Procedures
+        $testimonials = array(
+          'num_testimonials' => get_sub_field('num_testimonials')
+        );
+
+        $components .= ll_include_component(
+          'testimonials',
+          $testimonials,
+          array(),
+          true
+        );
+      break;
       case 'three-col-w-headline' :
         //All Procedures
         $columns = array(

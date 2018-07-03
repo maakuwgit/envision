@@ -48,8 +48,10 @@ $recovery    = $component_data['recovery'];
   <div class="container row between">
 
     <div class="synopsis__col synopsis__description col col-md-6of12 col-lg-6of12 col-xl-6of12 center">
+
     <?php if( $headline ) : ?>
       <h2 class="synopsis__header"><?php echo $headline; ?></h2>
+      <!-- .synopsis__header -->
     <?php endif; ?>
 
     <?php if( $content ) : ?>
@@ -61,11 +63,13 @@ $recovery    = $component_data['recovery'];
 
       <div class="row between">
       <?php if( $application ) : ?>
-        <div class="synopsis__treatment" data-clickable>
+        <div class="synopsis__treatment flex" data-clickable>
 
-          <svg class="icon icon-download">
-            <use xlink:href="#icon-download"></use>
-          </svg>
+          <div class="synopsis__icon coin">
+            <svg class="icon icon-download">
+              <use xlink:href="#icon-download"></use>
+            </svg>
+          </div><!-- .synopsis__icon -->
 
           <div class="synopsis__treatment__description">
             <h4>What It Treats</h4>
@@ -76,11 +80,13 @@ $recovery    = $component_data['recovery'];
       <?php endif; ?>
 
       <?php if( $procedure ) : ?>
-        <div class="synopsis__procedure" data-clickable>
+        <div class="synopsis__procedure flex" data-clickable>
 
-          <svg class="icon icon-download">
-            <use xlink:href="#icon-download"></use>
-          </svg>
+          <div class="synopsis__icon coin">
+            <svg class="icon icon-download">
+              <use xlink:href="#icon-download"></use>
+            </svg>
+          </div><!-- .synopsis__icon -->
 
           <div class="synopsis__procedure__description">
             <h4>Procedure Time</h4>
@@ -91,11 +97,13 @@ $recovery    = $component_data['recovery'];
       <?php endif; ?>
 
       <?php if( $recovery ) : ?>
-        <div class="synopsis__recovery" data-clickable>
+        <div class="synopsis__recovery flex" data-clickable>
 
-          <svg class="icon icon-download">
-            <use xlink:href="#icon-download"></use>
-          </svg>
+          <div class="synopsis__icon coin">
+            <svg class="icon icon-download">
+              <use xlink:href="#icon-download"></use>
+            </svg>
+          </div><!-- .synopsis__icon -->
 
           <div class="synopsis__recovery__description">
             <h4>Recovery Time</h4>

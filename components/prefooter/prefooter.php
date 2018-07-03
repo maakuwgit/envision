@@ -43,6 +43,8 @@ if( $image ) {
 }else{
   $bg = '';
 }
+
+if ( !$title && !$content ) return;
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>

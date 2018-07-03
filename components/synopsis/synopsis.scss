@@ -19,9 +19,26 @@
   .synopsis__procedure,
   .synopsis__recovery {
     @extend %card;
+    width: 100%;
+    flex: 0 1 auto;
+    padding: rem-calc(22);
     margin-top: $padding-xsmall;
     margin-bottom: $padding-xsmall;
     color: #3f3f3f;
+
+    @include screen-sm {
+      flex-direction: column;
+
+      h4 {
+        text-align: center;
+      }
+
+      .coin {
+        margin-right: auto;
+        margin-bottom: 0.5rem;
+        margin-left: auto;
+      }
+    }
 
     h4 {
       padding-bottom: rem-calc(8);
@@ -45,8 +62,13 @@
 
   .synopsis__procedure,
   .synopsis__recovery {
-    width: calc(50% - #{$padding-xsmall});
-    flex: 0 0.5 auto;
+    padding-top: rem-calc(33);
+    padding-bottom: rem-calc(33);
+
+    @include screen-xs-up {
+      width: calc(50% - #{$padding-xsmall});
+      flex: 0 0.5 auto;
+    }
   }
 
   .synopsis__procedure {
@@ -57,11 +79,54 @@
     margin-right: 0;
   }
 
-  .synopsis__description {
+  .synopsis__procedure__description,
+  .synopsis__recovery__description,
+  .synopsis__treatment__description {
+
+    @include screen-sm {
+      text-align: center;
+    }
 
     p {
       font-weight: $text-light;
       color: lighten(#3a3a3a, 30%);
+    }
+  }
+
+  .coin {
+    position: relative;
+    height: rem-calc(50);
+    width: rem-calc(50);
+    border-radius: 200px;
+    background-color: $teal;
+
+    @include screen-xs-up {
+      margin-right: rem-calc(22);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      border-radius: 200px;
+      width: rem-calc(58);
+      height: rem-calc(58);
+      top: rem-calc(-4);
+      right: rem-calc(-4);
+      bottom: rem-calc(-4);
+      left: rem-calc(-4);
+      z-index: -1;
+      background-color: $seafoam;
+    }
+
+    svg {
+      height: inherit;
+      width: inherit;
+      fill: $white;
+
+      use {
+        transform: scale(0.4);
+        transform-origin: center;
+      }
     }
   }
 }
