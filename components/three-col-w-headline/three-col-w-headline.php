@@ -45,10 +45,10 @@ $colspan = 12 / $num_columns;
 <?php if( $title ) : ?>
   <header class="three-column-w-headline__header container row centered">
     <<?php echo $title['tag']; ?> class="text-center"><?php echo $title['text']; ?></<<?php echo $title['tag']; ?>>
-  </header><!-- .container -->
+  </header><!-- .container.row.centered -->
 <?php endif; ?>
 
-  <div class="three-column-w-headline__blocks container row">
+  <div class="three-column-w-headline__blocks container row start">
 
   <?php if( $columns ) : ?>
     <?php foreach( $columns as $column ) : ?>
@@ -62,6 +62,6 @@ $colspan = 12 / $num_columns;
     <?php endforeach; ?>
   <?php endif; ?>
 
-  </div><!-- .container.row -->
+  </div><!-- .container.row.start -->
 
 </div>
