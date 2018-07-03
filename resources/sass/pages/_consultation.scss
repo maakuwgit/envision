@@ -1,0 +1,57 @@
+/**
+ * resources Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.page-template-template-consultation {
+
+  main .content > .container:first-of-type {
+    padding-top: rem-calc(200);
+    padding-bottom: rem-calc(176);
+    //min-height: calc( 100vh - #{rem-calc(200)} - #{rem-calc(176)})
+  }
+
+  .vac {
+    &:after {
+      width: 1px;
+      background-color: $silver;
+    }
+  }
+
+  .vac__content {
+    text-align: left;
+
+    p {
+      font-weight: $text-light;
+    }
+  }
+
+  .vac__content__wrapper {
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .vac__content__title {
+    margin-bottom: rem-calc(13);
+    padding-bottom: 0;
+    @extend %rubik;
+    font-size: rem-calc(42);
+    line-height: 52px;
+    line-height: 1.23809523809524;
+    font-weight: $text-regular;
+
+    &:after {
+      content: initial;
+      position: initial;
+    }
+  }
+
+  .vac__background svg {
+    width: auto;
+    max-height: rem-calc(367);
+  }
+
+}
