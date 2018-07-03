@@ -45,7 +45,7 @@ $num_testimonials = $num_testimonials->publish;
 ?>
 
 <?php if ( $testimonials->have_posts() ) : ?>
-<div class="ll-testimonials <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="testimonials">
+<section class="ll-testimonials<?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="testimonials">
 
   <div class="container row centered between">
 
@@ -80,7 +80,7 @@ $num_testimonials = $num_testimonials->publish;
             $testimonials->the_post();
             $image = get_the_post_thumbnail();
           ?>
-          <div class="testimonials__author<?php echo $first_css; ?>" data-clickthrough>
+          <div class="testimonials__author<?php echo $first_css; ?>" data-testimonial="testimonials__author-<?php the_ID(); ?>">
 
           <?php if( $image ) : ?>
             <figure class="testimonials__thumbnail thumbnail" data-backgrounder>
@@ -94,7 +94,7 @@ $num_testimonials = $num_testimonials->publish;
             </figure><!-- .testimonials__thumbnail -->
           <?php endif; ?>
 
-            <a href="#testimonials__author-<?php the_ID(); ?>" class="testimonials__author_name">
+            <a class="testimonials__author_name">
               <?php the_title(); ?>
             </a><!-- .testimonials__author_name -->
 
@@ -108,5 +108,5 @@ $num_testimonials = $num_testimonials->publish;
 
   </div><!-- .container.row -->
 
-</div>
+</section>
 <?php endif; ?>
