@@ -58,7 +58,9 @@ if( have_rows( 'components' ) ) {
       case 'image-slider' :
         //Home, All Procedures
         $slides = array(
-          'slides'   => get_sub_field('image_slider_images')
+          'heading'     => get_sub_field('image-slider-heading'),
+          'subheading'  => get_sub_field('image-slider-subheading'),
+          'slides'      => get_sub_field('image_slider_images')
         );
 
         $components .= ll_include_component(

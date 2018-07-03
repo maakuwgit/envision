@@ -9,6 +9,22 @@
 .ll-image-slider {
   position: relative;
 
+  .image-slider__heading {
+
+    h2 {
+      display: inline-flex;
+      @extend %underlined;
+    }
+
+    p {
+      font-weight: $text-light;
+    }
+
+    &:last-child {
+      margin-bottom: $padding-small;
+    }
+  }
+
   .image-slider__slides {
     position: relative;
     display: block;

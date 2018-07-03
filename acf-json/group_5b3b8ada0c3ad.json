@@ -3,6 +3,83 @@
     "title": "Image Slider",
     "fields": [
         {
+            "key": "field_5b3b9ff0db7a8",
+            "label": "Heading",
+            "name": "image-slider-heading",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5b3b9ff0db7a9",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_5b3b9ff0db7aa",
+                    "label": "Tag",
+                    "name": "tag",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "h2": "H2",
+                        "h3": "H3"
+                    },
+                    "allow_null": 0,
+                    "default_value": "h1",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                }
+            ]
+        },
+        {
+            "key": "field_5b3b9ffddb7ab",
+            "label": "Subheading",
+            "name": "image-slider-subheading",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
             "key": "field_5b3b8addf827c",
             "label": "Images",
             "name": "image_slider_images",
@@ -65,5 +142,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530629103
+    "modified": 1530634446
 }
