@@ -35,6 +35,7 @@
     }
 
     .blog-grid__blog__title {
+      @extend %gradient-text;
       margin-bottom: rem-calc(10);
       @extend %card__title;
       line-height: 21px;

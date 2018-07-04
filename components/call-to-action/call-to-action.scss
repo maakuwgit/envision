@@ -52,6 +52,7 @@
   }
 
   .gform_heading {
+    @extend %gradient-text;
   }
 
   .gform_title {

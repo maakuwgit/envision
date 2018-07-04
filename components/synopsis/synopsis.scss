@@ -15,6 +15,10 @@
     padding-bottom: $padding-small;
   }
 
+  .synopsis__header {
+    @extend %gradient-text;
+  }
+
   .synopsis__treatment,
   .synopsis__procedure,
   .synopsis__recovery {
@@ -85,6 +89,10 @@
 
     @include screen-sm {
       text-align: center;
+    }
+
+    h4 {
+      @extend %gradient-text;
     }
 
     p {

@@ -40,6 +40,10 @@
   padding-top: $padding-xsmall;
   padding-bottom: $padding-xsmall;
 
+  h1, h2, h3, h4, h5, h6 {
+    @extend %gradient-text;
+  }
+
   h2, .h2 {
     margin-bottom: $padding-xsmall;
     padding-bottom: $padding-xsmall;

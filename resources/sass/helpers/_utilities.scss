@@ -49,6 +49,12 @@
   display: none !important;
 }
 
+%gradient-text {
+  background: -webkit-linear-gradient(right, $teal 0%, $navy 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 %underlined {
   position: relative;
   margin: auto;
@@ -220,13 +226,6 @@
 }
 .vertical-center > * {
   flex: 0 0 auto;
-}
-
-.no-shadow,
-.thumbnail [data-backgrounder].no-shadow,
-[data-backgrounder].no-shadow {
-  text-shadow: none;
-  box-shadow: none;
 }
 
 /**

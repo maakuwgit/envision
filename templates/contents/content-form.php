@@ -8,15 +8,15 @@
 
   <header class="gform_heading">
   <?php
-      ll_include_component(
-        'supertitle',
-        array(
-          'text' => $supertitle
-        ),
-        array(
-          'classes' => [ 'gform_supertitle']
-        )
-      );
+    ll_include_component(
+      'supertitle',
+      array(
+        'text' => $supertitle
+      ),
+      array(
+        'classes' => [ 'gform_supertitle']
+      )
+    );
   ?>
     <h2 class="gform_title"><?php the_title(); ?></h2>
 
@@ -25,6 +25,16 @@
   </header><!-- .supertitle -->
 
 <?php endif; ?>
+
+
+<?php
+  ll_include_component(
+    'location-grid',
+    array(
+      'num_locations' => get_field('location_grid_num_locations')
+    )
+  );
+?>
 
 <?php if( is_plugin_active( 'gravityforms/gravityforms.php' ) ) : ?>
 

@@ -16,6 +16,11 @@
   }
 
   .procedure-grid__heading {
+
+    h1, h2, h3, h4, h5, h6 {
+      @extend %gradient-text;
+    }
+
     h2 {
       margin-bottom: rem-calc(20);
     }
@@ -30,6 +35,7 @@
   }
 
   .procedure-grid__procedure__title {
+    @extend %gradient-text;
     @extend %card__title;
   }
 

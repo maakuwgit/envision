@@ -20,6 +20,10 @@
 
   .image-slider__heading {
 
+    h2, h3, h4, h5, h6 {
+      @extend %gradient-text;
+    }
+
     h1 + h2 {
       @extend %title
     }

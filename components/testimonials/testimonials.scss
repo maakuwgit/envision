@@ -20,7 +20,7 @@
   }
 
   .testimonials__heading {
-
+    @extend %gradient-text;
   }
 
   .testimonials__description {

@@ -40,10 +40,12 @@
     margin-bottom: rem-calc(13);
     padding-bottom: 0;
     @extend %rubik;
+    @extend %gradient-text;
     font-size: rem-calc(42);
     line-height: 52px;
     line-height: 1.23809523809524;
-    font-weight: $text-regular;
+    font-weight: $text-light;
+    text-transform: initial;
 
     &:after {
       content: initial;

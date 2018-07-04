@@ -23,6 +23,7 @@
   .three-column-w-headline__header {
     h2, h3, h4, h5, h6 {
       @extend %underlined;
+      @extend %gradient-text;
     }
   }
 
@@ -44,6 +45,7 @@
     margin-bottom: rem-calc(6);
     line-height: 34px;
     line-height: 1.54545454545455;
+    @extend %gradient-text;
   }
 
 }

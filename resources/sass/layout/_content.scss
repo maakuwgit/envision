@@ -12,6 +12,7 @@
 
 %title {
   @extend %h0;
+  @extend %gradient-text;
   margin: auto auto #{rem-calc(12)} auto;
 }
 
