@@ -111,31 +111,10 @@
 }
 
 /**
- * Input styles
+ * Input Effects
+ * Handles hover effects and such. Externalized so it can
+ * be applied to components as well
  */
-@mixin input_base {
-  display: inline-block;
-  width: 100%;
-  padding: 1rem 1rem 0.875rem 1rem;
-  border: solid 1px $grey;
-  border-radius: 0;
-  font-size: rem-calc(16);
-  color: $lavender;
-  appearance: none;
-  -webkit-appearance: none;
-  background-color: transparent;
-  @include screen-lg-up {
-    font-size: rem-calc(14);
-    &:hover {
-      cursor: pointer;
-      @include input_effects;
-    }
-  }
-  &:focus {
-    @include input_effects;
-  }
-}
-
 @mixin input_effects {
   border-color: $link-hover-color;
   outline: none;
@@ -145,6 +124,39 @@
   }
 }
 
+/**
+ * Input styles
+ */
+@mixin input_base {
+  display: inline-block;
+  width: 100%;
+  margin-top: $padding-xsmall * 0.75;
+  margin-bottom: $padding-xsmall * 0.75;
+  padding: #{rem-calc(16)}
+           #{rem-calc(16)}
+           #{rem-calc(14)}
+           #{rem-calc(16)};
+  border: solid 1px $grey;
+  border-radius: rem-calc(4);
+  font-size: rem-calc(16);
+  color: $lavender;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+
+  @include screen-lg-up {
+
+    &:hover {
+      cursor: pointer;
+      @include input_effects;
+    }
+
+  }
+
+  &:focus {
+    @include input_effects;
+  }
+}
 
 /**
  * Background opacity

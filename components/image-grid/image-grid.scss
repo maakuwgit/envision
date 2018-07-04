@@ -9,6 +9,13 @@
 .ll-image-grid {
   display: flex;
   justify-content: center;
+  margin-top: $padding-small;
+  margin-bottom: $padding-medium;
+
+  @include screen-lg-up {
+    margin-top: $padding-medium;
+    margin-bottom: $padding-large;
+  }
 
   .container {
     display: flex;
@@ -16,6 +23,11 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: center;
+  }
+
+  .image-grid__heading {
+    display: inline-flex;
+    @extend %underlined;
   }
 
   .image-grid__items {
@@ -27,14 +39,14 @@
   }
 
   .image-grid__item {
+    list-style: none;
     @extend %card;
-    height: rem-calc(120);
     display: flex;
     flex-wrap: wrap;
     flex: 0 1 auto;
-    width: calc( 100% - #{$grid-column-padding*2} );
     align-items: center;
-    list-style: none;
+    width: calc( 100% - #{$grid-column-padding*2} );
+    height: rem-calc(120);
     margin: $grid-column-padding;
     padding: #{rem-calc(31)} #{rem-calc(22)};
     background-size: contain;
@@ -58,8 +70,8 @@
   }
 
   .image-grid__heading {
-    margin-left: auto;
     margin-bottom: rem-calc(48);
+    margin-left: auto;
   }
 
   .image-grid__content {
@@ -69,9 +81,9 @@
   .image-grid__content__caption {
     margin-left: rem-calc(74);
     font-size: rem-calc(16);
+    font-weight: $text-regular;
     line-height: 21px;
     line-height: 1.3125;
-    font-weight: $text-regular;
     color: $teal;
   }
 }

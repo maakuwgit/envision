@@ -7,6 +7,13 @@
  */
 
 .ll-team-grid {
+  margin-top: $padding-small;
+  margin-bottom: $padding-medium;
+
+  @include screen-lg-up {
+    margin-top: $padding-medium;
+    margin-bottom: $padding-large;
+  }
 
   .team-grid__heading {
     display: inline-flex;
@@ -17,6 +24,14 @@
   [data-backgrounder] {
     min-height: rem-calc(299);
     width: 100%;
+  }
+
+  [data-magnific] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 
   .team-grid__items {
@@ -54,6 +69,22 @@
     line-height: 34px;
     line-height: 1.54545454545455;
     text-align: left;
+  }
+
+  .team-grid__thumb__caption {
+    text-align: left;
+
+    h3 {
+      margin-top: rem-calc(20);
+    }
+
+    p {
+      margin-top: 0;
+      font-size: rem-calc(16);
+      font-weight: $text-light;
+      line-height: 22px;
+      line-height: 1.375;
+    }
   }
 
 }

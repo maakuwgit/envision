@@ -46,7 +46,7 @@ $members = new WP_Query( $args );
 ?>
 
 <?php if( !$members->have_posts() ) return; ?>
-<div class="ll-team-grid <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="team-grid">
+<section class="ll-team-grid <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="team-grid">
 
   <div class="container text-center">
 
@@ -61,8 +61,8 @@ $members = new WP_Query( $args );
   ?>
     <li class="team-grid__item col-3of12">
 
-      <figure id="<?php echo basename(get_permalink()); ?>" class="team-grid__thumb__figure" data-clickthrough>
-        <a href="<?php the_permalink(); ?>" class="hide"></a>
+      <figure id="<?php echo basename(get_permalink()); ?>" class="team-grid__thumb__figure relative">
+        <a href="<?php the_permalink(); ?>" data-magnific></a>
 
         <div class="team-grid__thumb__image" data-backgrounder>
           <div class="feature">
@@ -74,11 +74,19 @@ $members = new WP_Query( $args );
 
           <h3 class="team-grid__thumb__title h5"><?php the_title(); ?></h3>
 
-          <p>
-          <?php //foreach( $positions as $position ) : ?>
-            <?php //echo $position['name']; ?>
-          <?php //endforeach; ?>
-          </p>
+        <?php if( $positions && ! is_wp_error( $positions ) ) : ?>
+          <?php
+            $position_names = [];
+
+            foreach( $positions as $position ) {
+              $position_names[] = $position->name;
+            }
+
+            $position_list = join(', ', $position_names);
+
+            echo format_text($position_list);
+          ?>
+        <?php endif; ?>
 
         </figcaption><!-- .team-grid__thumb__caption -->
 
@@ -87,5 +95,9 @@ $members = new WP_Query( $args );
     </li><!-- .team-grid__item -->
 
   <?php endwhile; ?>
+<?php wp_reset_postdata(); ?>
+    </ul><!-- .team-grid__list.no-bullet.row -->
 
-</div>
+  </div><!-- .container -->
+
+</section>

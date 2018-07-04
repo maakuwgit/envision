@@ -57,3 +57,19 @@
     color: $black;
   }
 }
+
+.mfp-ajax-holder .mfp-content {
+  width: 80vw;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: $white;
+}
+
+.mfp-container {
+  padding: 0;
+}
+
+.mfp-bg {
+  opacity: 0.6;
+  background-color: white;
+}

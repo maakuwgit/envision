@@ -79,10 +79,10 @@ $heading  = $component_data['heading'];
 
   <?php endforeach; ?>
 
-  </ul>
+  </ul><!-- .image-grid__items -->
 
 <?php endif; ?>
 
-  </div>
+  </div><!-- .container text-center -->
 
 </section>

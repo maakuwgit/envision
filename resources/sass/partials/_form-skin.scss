@@ -10,6 +10,8 @@
   list-style: none;
 
   .gfield {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     flex: 0 1 auto;
     @include screen-lg-up {
@@ -21,6 +23,8 @@
 
 .gform_heading {
   @extend %header;
+  font-weight: $text-light;
+  margin-bottom: rem-calc(28);
 }
 
 .gform_supertitle {
@@ -32,8 +36,6 @@
 }
 
 .gform_body {
-  width: 50%;
-  flex: 0 0.5 auto;
 }
 
 .gform_description {
@@ -48,11 +50,25 @@
   }
 }
 
+.gfield_checkbox {
+  list-style: none;
+  margin: $padding-xsmall/2 auto;
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .gfield_error {
   input,
   textarea {
     border-color: $danger-color;
   }
+}
+
+.ginput_container {
+  width: 100%;
 }
 
 .validation_error {
@@ -66,3 +82,29 @@
 .validation_message {
   color: $danger-color;
 }
+
+//Placeholders
+@mixin placeholder {
+  font-weight: $text-regular;
+  color: $lavender;
+}
+
+/*Dev Notes:
+They are non-standard syntax and thus, these cannot be stacked!
+An extension will not work in this case. It seems to be ignored on compile
+*/
+::-webkit-input-placeholder {
+  @include placeholder;
+} /* Chrome/Opera/Safari */
+
+::-moz-placeholder {
+  @include placeholder;
+}/* Firefox 19+ */
+
+:-moz-placeholder {
+  @include placeholder;
+}/* Firefox 18- */
+
+:-ms-input-placeholder {
+  @include placeholder;
+} /* IE 10+ */

@@ -9,7 +9,10 @@
 
   <?php
   do_action('get_header');
-  get_template_part('templates/partials/header');
+
+  if ( 'team' !== get_post_type() ) {
+    get_template_part('templates/partials/header');
+  }
   ?>
 
   <div class="wrap" role="document">
@@ -22,7 +25,11 @@
     </div><!-- /.content -->
   </div><!-- /.wrap -->
 
-  <?php get_template_part('templates/partials/footer'); ?>
+  <?php
+  if ( 'team' !== get_post_type() ) {
+    get_template_part('templates/partials/footer');
+  }
+  ?>
 
   <?php wp_footer(); ?>
 

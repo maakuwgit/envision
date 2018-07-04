@@ -1,30 +1,34 @@
 /**
  * Form Template
  */
-body.page-template-template-form {
-  > article {
-    padding-top: $padding-small;
-    padding-bottom: 0;
-    background-color: $black;
-  }
+body.page-template-template-form-template {
 
   .gform_wrapper {
-    padding-top: 0;
-    padding-bottom: $padding-small;
+    @extend %card;
+    width: 35%;
+    flex: 0 0.36 auto;
+    margin-left: auto;
+    margin-right: 13%;
+    margin-top: $padding-small;
+    margin-bottom: $padding-medium;
+    background-color: $white;
+
     @include screen-lg-up {
-      padding-bottom: $padding-medium;
+      margin-top: $padding-medium;
+      margin-bottom: $padding-large;
     }
+
+    textarea {
+      height: rem-calc(150);
+    }
+
   }
 
-  input[type="submit"] {
-    margin-top: $grid-gutter-width;
-    margin-right: rem-calc(38);
-    margin-left: auto;
-    padding-top: rem-calc(5);
-    padding-bottom: rem-calc(5);
-    padding-left: rem-calc(30);
-    font-size: rem-calc(16);
-    background: transparent url(../img/chevron-right-o.png) left center no-repeat;
-    background-size: rem-calc(20);
+  .gform_footer {
+    display: flex;
+  }
+
+  .gform_button {
+    margin: 1rem auto auto auto;
   }
 }

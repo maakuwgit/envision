@@ -19,8 +19,16 @@
     // Fires after common.init, before .finalize and common.finalize
     init: function() {
 
-      var _this = this;
+      var _this   = this,
+          anchors = $(this.selector).find('[data-magnific]');
 
+      if( anchors ) {
+
+        anchors.magnificPopup({
+          type: 'ajax'
+        });
+
+      }
     },
 
 

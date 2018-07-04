@@ -12,7 +12,6 @@ html {
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $blue;
   @include screen-xl-up {
     font-size: 125%;
   }
@@ -107,15 +106,65 @@ img {
   height: auto;
 }
 
-input:not([type="button"]):not([type="image"]):not([type="submit"]) {
-  @include input_base;
+input {
+  &[type="text"],
+  &[type="date"],
+  &[type="email"] {
+   @include input_base;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &[type="checkbox"] {
+    display: inline-flex;
+    appearance: none;
+    margin-right: rem-calc(13);
+    height: rem-calc(19);
+    width: rem-calc(19);
+    border: #{rem-calc(2)} solid rgba(#979797, 0.5);
+    border-radius: rem-calc(4);
+
+    &:checked {
+      border-color: transparent;
+      background-color: transparent;
+
+      &:after,
+      &:before {
+        content: '';
+        position: absolute;
+      }
+
+      &:before {
+        z-index: 1;
+        height: rem-calc(23);
+        width: rem-calc(23);
+        border-radius: rem-calc(6);
+        margin-left: rem-calc(-4);
+        margin-top: rem-calc(-4);
+        background-color: $teal;
+        background-image: linear-gradient(to right, rgba(190,199,218,1) 0%, rgba(182,224,227,1) 100%);
+      }
+
+      &:after {
+        z-index: 2;
+        height: rem-calc(15);
+        width: rem-calc(15);
+        border-radius: inherit;
+        background-color: $navy;
+        background-image: linear-gradient(320.43deg, $teal 0%, $navy 100%);
+      }
+    }
+  }
 }
 
 label {
-  display: inline-block;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 0.875rem;
+  display: inline-flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: rem-calc(16);
+  font-weight: $text-regular;
 }
 
 main {
