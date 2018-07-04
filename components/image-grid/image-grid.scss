@@ -28,6 +28,7 @@
   .image-grid__heading {
     display: inline-flex;
     @extend %underlined;
+    @extend %gradient-text;
   }
 
   .image-grid__items {

@@ -18,6 +18,7 @@
   .team-grid__heading {
     display: inline-flex;
     @extend %underlined;
+    @extend %gradient-text;
     margin-bottom: rem-calc(29);
   }
 
@@ -65,6 +66,7 @@
   }
 
   .team-grid__thumb__title {
+    @extend %gradient-text;
     margin-top: rem-calc(17);
     line-height: 34px;
     line-height: 1.54545454545455;
