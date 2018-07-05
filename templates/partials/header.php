@@ -13,7 +13,7 @@
       <?php else : ?>
 
         <a class="logo__brand flex" href="<?php echo esc_url(home_url('/')); ?>">
-          <?php echo ll_get_logo(); ?>
+          <?php bloginfo('name');?>
         </a>
 
       <?php endif; ?>

@@ -19,7 +19,7 @@
       <div class="footer__logo_wrap col col-md-4of12 col-lg-4of12 col-xl-4of12">
 
         <a class="footer__logo__anchor" href="<?php echo esc_url(home_url('/')); ?>">
-          <?php echo ll_get_logo(); ?>
+          <?php bloginfo('name');?>
         </a><!-- .footer__logo__anchor -->
 
         <?php if( $address ) : ?>
