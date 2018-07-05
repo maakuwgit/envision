@@ -7,19 +7,88 @@
   max-width: 937px;
   padding-top: $padding-medium;
   padding-bottom: $padding-medium;
+  background: linear-gradient(180deg, $mint 0%, $white 100%);
+
+  &.team {
+    max-height: 100vh;
+    overflow: hidden;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
   @include screen-lg-up {
     padding-top: $padding-large;
     padding-bottom: $padding-large;
   }
+
 }
 
 .post__content {
+  overflow: scroll;
+  padding-right: rem-calc(60);
+  padding-left: rem-calc(60);
 
   figure, p, li, time, dd, caption, td {
     margin-top: 0;
     margin-bottom: $padding-small;
-    font-weight: 300;
+    color: #3f3f3f;
+    font-weight: $text-light;
+  }
+
+  &.team__content {
+    position: relative;
+    overflow: scroll;
+/* Dev Note: gradient overlay on the text
+    &:before {
+      position: fixed;
+      content: '';
+      height: rem-calc(100);
+      width: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }*/
+  }
+
+  .team__positions {
+    margin-bottom: rem-calc(37);
+    font-size: rem-calc(16);
+    font-weight: $text-regular;
+    line-height: 22px;
+    line-height: 1.375;
+    color: #3f3f3f;
+  }
+
+}
+
+.post__title {
+  @extend %title;
+
+  &.team__title {
+    @extend %gradient-text;
+    margin-top: rem-calc(53);
+    margin-bottom: auto;
+    text-transform: initial;
+  }
+
+}
+
+.post__image {
+
+  &.team__image {
+    max-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeate: no-repeat;
+
+    img {
+      width: 100%;
+      height: auto;
+      opacity: 0;
+    }
   }
 
 }

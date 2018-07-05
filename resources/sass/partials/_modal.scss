@@ -58,6 +58,11 @@
   }
 }
 
+body.admin-bar .mfp-wrap {
+  top: rem-calc(32);
+  height: calc( 100% - #{rem-calc(32)} );
+}
+
 .mfp-ajax-holder .mfp-content {
   width: 80vw;
   height: 100vh;
