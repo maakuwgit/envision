@@ -47,7 +47,7 @@ $colspan = 12 / $num_columns;
 
 <?php if( $title ) : ?>
   <header class="three-column-w-headline__header container row centered">
-    <<?php echo $title['tag']; ?> class="text-center"><?php echo $title['text']; ?></<<?php echo $title['tag']; ?>>
+    <<?php echo $title['tag']; ?> class="text-center"><?php echo $title['text']; ?></<?php echo $title['tag']; ?>>
   </header><!-- .container.row.centered -->
 <?php endif; ?>
 
