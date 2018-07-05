@@ -15,7 +15,7 @@
   z-index: 1;
   @include font-size( 32 );
 
-  .navbar.top & {
+  .navbar.top:not(.no-hero) & {
     color: $white;
   }
 }
