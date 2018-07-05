@@ -26,7 +26,6 @@
 
 <?php endif; ?>
 
-
 <?php
   ll_include_component(
     'location-grid',

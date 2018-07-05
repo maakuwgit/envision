@@ -41,6 +41,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5b3d67f806314",
+            "label": "Fax Number",
+            "name": "location_fax",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5b2ed358eefa0",
             "label": "Map",
             "name": "location_map",
@@ -76,5 +95,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530196588
+    "modified": 1530750980
 }

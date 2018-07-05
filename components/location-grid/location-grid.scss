@@ -7,5 +7,64 @@
  */
 
 .ll-location-grid {
+  align-items: center;
 
+  .ll-location-grid__title,
+  .ll-location-grid__sub_title {
+  }
+
+  .ll-location-grid__locations {
+    width: 37%;
+    flex: 0 0.37 auto;
+    align-items: flex-start;
+    margin-left: 16%;
+  }
+
+  .ll-location-grid__location {
+    display: flex;
+    flex-direction: column;
+
+    @include screen-sm {
+    }
+
+    a[href^="tel:"] {
+      cursor: initial;
+      color: currentColor;
+    }
+
+  }
+
+  .ll-location-grid__location__title {
+    @extend %gradient-text;
+    font-size: rem-calc(22);
+    line-height: 52;
+    line-height: 2.36363636363636;
+  }
+
+  .ll-location-grid__location__address,
+  .ll-location-grid__location__fax,
+  .ll-location-grid__location__phone {
+    font-size: rem-calc(16);
+    line-height: $padding-small;
+  }
+
+  .ll-location-grid__location__fax {
+  }
+
+  .ll-location-grid__location__phone {
+  }
+
+  .ll-location-grid__location__address {
+  }
+
+  .ll-location-grid__location__directions {
+    display: block;
+    align-self: flex-start;
+    margin-bottom: rem-calc(27);
+    font-size: rem-calc(18);
+    font-weight: $text-regular;
+    line-height: 30px;
+    line-height: 1.66666666666667;
+    border-bottom: solid 1px $navy;
+  }
 }
