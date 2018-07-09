@@ -21,6 +21,7 @@
     .lr-blocks__figure {
       left: 0;
       right: initial;
+      background-position-x: left;
     }
   }
 
@@ -53,6 +54,7 @@
     top: $padding-medium;
     right: 0;
     bottom: $padding-medium;
+    background-position-x: right;
   }
 
   @include screen-md-up {
