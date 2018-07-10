@@ -7,7 +7,7 @@
   display: flex;
   width: 100%;
   margin: 0;
-  padding: 39px 0;
+  padding: #{rem-calc(39)} 0;
   border: 0;
   border-radius: 0;
 
@@ -82,7 +82,7 @@
   }
 
   .menu-item a {
-    padding: #{rem-calc(20)};
+    padding: rem-calc(20);
     font-size: rem-calc(15);
     font-weight: $text-medium;
     line-height: 18px;
@@ -402,6 +402,7 @@ body.locked {
 #menu-secondary-navigation {
   @include screen-lg-up {
     margin-left: 0;
+    padding-left: 0;
   }
 
   > .menu-item {
