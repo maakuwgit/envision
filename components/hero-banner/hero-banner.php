@@ -42,7 +42,7 @@ $heading            = $component_data['heading']['text'];
 $heading_tag        = $component_data['heading']['tag'];
 $subheading         = $component_data['subheading']['text'];
 $subheading_tag     = $component_data['subheading']['tag'];
-$video              = $component_data['video'];
+$video              = $component_data['looping_video'];
 $overlay            = $component_data['overlay'];
 $image              = $component_data['image'];
 
