@@ -7,7 +7,7 @@
   display: flex;
   width: 100%;
   margin: 0;
-  padding: #{rem-calc(39)} 0;
+  padding: #{rem-calc(19)} 0;
   border: 0;
   border-radius: 0;
 
@@ -343,10 +343,10 @@ body.locked {
         display: block;
         padding: #{rem-calc(20)} 0;
         padding: 0.875vh 0;
-        font-size: rem-calc(42);
-        line-height: 100px;
-        line-height: 2.38095238095238;
-        line-height: 7.5vh;
+        font-size: rem-calc(32);
+        line-height: 74px;
+        line-height: 2;
+        line-height: 7.25vh;
         color: $white;
         text-transform: initial;
         font-weight: 300;
