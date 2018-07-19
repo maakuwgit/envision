@@ -79,6 +79,7 @@ if( $page_title_style ) {
       right: 0;
       bottom: 0;
       left: 0;
+      z-index: 1;
       opacity: <?php echo $overlay; ?>;
       background-color: rgba(17,43,95,0.5);
       background: linear-gradient(270deg, #00959B 0%, #20337B 100%);
@@ -90,9 +91,8 @@ if( $page_title_style ) {
     if( $video ) {
 
       $loop_video = array(
-        'video'    => $video,
-        'fallback' => wp_get_attachment_url($bg),
-        'overlay'  => $overlay
+        'video' => $video,
+        'fallback' => wp_get_attachment_url($bg)
       );
 
       ll_include_component(
