@@ -15,7 +15,7 @@
   z-index: 1;
   @include font-size( 20 );
 
-  .navbar.top:not(.no-hero) & {
+  body.locked & {
     color: $white;
   }
 }
