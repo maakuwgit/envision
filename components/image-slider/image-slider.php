@@ -72,9 +72,9 @@ $subheading = $component_data['subheading'];
 
     <?php foreach( $slides as $slide ) : ?>
 
-    <div class="image-slider__slide">
-
-    <?php echo ll_format_image($slide['image']); ?>
+    <div class="image-slider__slide" id="#<?php echo $slide['image']['name']; ?>" data-modal="<?php echo $slide['image']['url']; ?>">
+        <?php echo ll_format_image($slide['image']); ?>
+      </a>
 
     </div><!-- .image-slider__slide -->
 

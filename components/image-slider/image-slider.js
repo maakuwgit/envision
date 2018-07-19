@@ -46,6 +46,28 @@
           });
 
         });
+
+        function openSlide(e) {
+          e.preventDefault();
+          var popupId = $(this).data('modal');
+
+          if( popupId !== '' ) {
+            var popup = $.magnificPopup.open({
+              items           : {
+                src: popupId
+              },
+              type            : 'image',
+              fixedBgPos      : true,
+              overflowY       : 'auto',
+              closeBtnInside  : true,
+              preloader       : false,
+              midClick        : true,
+              removalDelay    : 300,
+            }, 0);
+          }
+        };
+
+        $('.image-slider__slide').off('click.openSlide').on('click.openSlide', openSlide);
     },
 
 

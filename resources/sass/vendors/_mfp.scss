@@ -1,6 +1,27 @@
 /**
  * Magnific Popup styles
  */
+.mfp-image-holder,
+.mfp-iframe-holder {
+  .mfp-close {
+    top: rem-calc(60);
+    right: rem-calc(30);
+    display: flex;
+    width: rem-calc(32);
+    height: rem-calc(32);
+    padding: 0;
+    justify-content: center;
+    font-size: rem-calc(70);
+    color: $mfp-controls-color;
+    text-align: center;
+    line-height: 0;
+
+    &:hover {
+      background-color: transparent;
+      color: $teal;
+    }
+  }
+}
 
 // overlay at start
 .mfp-fade.mfp-bg {
