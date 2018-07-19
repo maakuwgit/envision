@@ -7,8 +7,8 @@
 */
 
 $defaults = [
-  'heading'  => false,
-  'images'   => false,
+  'heading'     => false,
+  'images'      => false
 ];
 
 $component_data = ll_parse_args( $component_data, $defaults );
@@ -34,8 +34,8 @@ $id       = ( $component_args['id'] ? $component_args['id'] : uniqid('image-grid
 /**
  * ACF values pulled into the component from the components.php partial.
  */
-$images   = $component_data['images'];
-$heading  = $component_data['heading'];
+$images       = $component_data['images'];
+$heading      = $component_data['heading'];
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
@@ -54,25 +54,30 @@ $heading  = $component_data['heading'];
   <?php
     foreach( $images as $image ) :
 
-      $img      = $image['image'];
-      $caption  = $image['caption'];
+      $img     = $image['image'];
+      $caption = $image['caption'];
+      $style   = $image['style'];
+
+      if( $img && $style === 'image' ){
+        $bg = '  data-backgrounder';
+      }else{
+        $bg = '';
+      }
 
   ?>
-    <li class="image-grid__item" data-backgrounder>
+    <li class="image-grid__item"<?php echo $bg; ?>>
 
     <?php if( $img ) : ?>
       <figure class="image-grid__image feature">
         <?php echo ll_format_image($img); ?>
       </figure><!-- .image-grid__image -->
-    <?php else: ?>
+    <?php endif; ?>
 
-      <?php if( $caption ) : ?>
-        <div class="image-grid__content text-left">
-          <h3 class="image-grid__content__caption"><?php echo $caption; ?></h3>
-        </div>
-        <!-- .image-grid__content -->
-      <?php endif; ?>
-
+    <?php if( $caption ) : ?>
+      <div class="image-grid__content text-left">
+        <h3 class="image-grid__content__caption"><?php echo $caption; ?></h3>
+      </div>
+      <!-- .image-grid__content -->
     <?php endif; ?>
 
     </li><!-- .image-grid__item -->

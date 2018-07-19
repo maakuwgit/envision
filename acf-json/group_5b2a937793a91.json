@@ -80,6 +80,28 @@
             "button_label": "+ Image",
             "sub_fields": [
                 {
+                    "key": "field_5b50cb2705d3b",
+                    "label": "Style",
+                    "name": "style",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "has_caption": "With Caption",
+                        "image": "Image Only"
+                    },
+                    "allow_null": 0,
+                    "default_value": "image",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                },
+                {
                     "key": "field_5b2a9377aabde",
                     "label": "Image",
                     "name": "image",
@@ -142,5 +164,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1530638811
+    "modified": 1532021744
 }
