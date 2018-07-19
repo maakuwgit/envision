@@ -58,6 +58,14 @@
 
   .image-slider__slide {
 
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      cursor: ew-resize;
+    }
+
     img {
       max-width: 938px;
       max-height: 525px;
