@@ -26,12 +26,20 @@
 
 
         prevArrow += '<button type="button" class="image-slider__slick-prev">';
-        prevArrow += ' &#x25C0';
+        prevArrow += '&#x25C0;';
         prevArrow += '</button>';
 
         nextArrow += '<button type="button" class="image-slider__slick-next">';
         nextArrow += '&#x25B6;';
         nextArrow += '</button>';
+
+        function enableSlide(e){
+          $('.image-slider__slide').on('click.openSlide', openSlide);
+        }
+
+        function disableSlide(e){
+          $('.image-slider__slide').off('click.openSlide');
+        }
 
         gallery.each(function(){
 
@@ -43,7 +51,9 @@
             variableWidth: true,
             appendArrows: gallery.find('.image-slider__nav'),
             dots: false
-          });
+          }).
+          on('beforeChange.disableSlide', disableSlide).
+          on('afterChange.enableSlide', enableSlide);
 
         });
 

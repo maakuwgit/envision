@@ -76,10 +76,16 @@
 
   .slick-initialized .slick-slide {
     display: block;
+    transition: all 300ms ease-in-out;
 
     &[aria-hidden="true"] {
       transform: scale(0.9);
       opacity: 0.5;
+      transition: all 300ms ease-in-out;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 
@@ -98,13 +104,16 @@
     height: rem-calc(33);
     padding: rem-calc(11);
     font-size: rem-calc(10);
+    line-height: 1.5;
   }
 
   .image-slider__slick-prev {
     left: 0;
+    text-align: left;
   }
 
   .image-slider__slick-next {
     right: 0;
+    text-align: right;
   }
 }

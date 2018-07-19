@@ -3,12 +3,12 @@
   "querystring": true,
   "assets/css/main.min.css": {
     "path": "assets/css/main.min.css",
-    "hash": "27301388",
+    "hash": "9a956aab",
     "handle": "roots_css"
   },
   "assets/js/scripts.min.js": {
     "path": "assets/js/scripts.min.js",
-    "hash": "e3bd78a8",
+    "hash": "d96d4089",
     "handle": "roots_js"
   }
 }
