@@ -16,7 +16,7 @@
 
     <div class="row container">
 
-      <div class="footer__logo_wrap col col-md-4of12 col-lg-4of12 col-xl-4of12">
+      <div class="footer__logo_wrap col col-md-4of12 col-lg-4of12 col-xl-3of12">
 
         <a class="footer__logo__anchor" href="<?php echo esc_url(home_url('/')); ?>">
           <?php bloginfo('name');?>
@@ -34,7 +34,7 @@
 
       </div><!-- .col -->
 
-      <div class="footer__navigation_wrap col col-md-8of12 col-lg-8of12 col-xl-8of12">
+      <div class="footer__navigation_wrap col col-md-8of12 col-lg-8of12 col-xl-9of12">
 
         <div class="footer__navigation">
         <?php if (has_nav_menu('footer_navigation')) : ?>
