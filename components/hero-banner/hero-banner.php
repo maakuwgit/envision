@@ -90,8 +90,9 @@ if( $page_title_style ) {
     if( $video ) {
 
       $loop_video = array(
-        'video' => $video,
-        'fallback' => wp_get_attachment_url($bg)
+        'video'    => $video,
+        'fallback' => wp_get_attachment_url($bg),
+        'overlay'  => $overlay
       );
 
       ll_include_component(
