@@ -10,43 +10,19 @@
   padding: #{rem-calc(19)} 0;
   border: 0;
   border-radius: 0;
-
-  &:not(.top),
-  &.no-hero {
-    background-color: $white;
-  }
+  background-color: $white;
 
   &.no-hero {
 
     &:not(.menu-open) {
 
       .navbar-toggle__inner,
-      &.top .navbar-toggle__inner,
       .navbar-toggle__inner::before,
-      &.top .navbar-toggle__inner::before,
-      .navbar-toggle__inner::after,
-      &.top .navbar-toggle__inner::after {
+      .navbar-toggle__inner::after {
         background-color: $navy;
       }
 
     }
-
-  }
-
-  &.top {
-    &:not(.no-hero) {
-
-      .menu-item a {
-        color: $white;
-
-        &:hover {
-          color: $navy;
-        }
-      }
-
-    }
-
-    background-color: transparent;
 
   }
 
@@ -142,19 +118,6 @@
     background-color: #000;
   }
 
-  .navbar.top & {
-    border-color: $white;
-
-    .icon-bar {
-      background-color: $white;
-    }
-
-  }
-
-  .navbar.top &:hover,
-  .navbar.top &:focus,
-  .navbar.top &.open:hover,
-  .navbar.top &.open:focus,
   &.open:hover,
   &.open:focus,
   &:hover,
@@ -163,8 +126,6 @@
     background-color: transparent;
   }
 
-  .navbar.top:hover,
-  .navbar.top:focus,
   &:hover,
   &:focus {
 
@@ -179,7 +140,6 @@
 
   }
 
-  .navbar.top &:hover,
   &:hover {
 
     .navbar-toggle__inner {
@@ -190,14 +150,6 @@
 
   &.open {
     border-color: $white;
-
-    .navbar.top & {
-
-      .navbar-toggle__inner {
-        background-color: transparent;
-      }
-
-    }
 
     .navbar-toggle__inner {
       transform: rotate(90deg);
@@ -255,16 +207,6 @@
     background-color: $navy;
     border-radius: 0;
     position: absolute;
-  }
-
-  .navbar.top & {
-
-    &,
-    &::before,
-    &::after {
-      background-color: $white;
-    }
-
   }
 
   &::before,

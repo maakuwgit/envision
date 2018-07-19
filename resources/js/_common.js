@@ -123,35 +123,6 @@
         }
       });
 
-      //If theres a controller for ScrollMagic, spool it up!
-      if( typeof ScrollMagic !== 'undefined' ) {
-        var adminHeight   = ( $('#wpadminbar').length > 0 ? $('#wpadminbar').outerHeight() : 0 ),
-            primary_nav   = 'body > header.navbar',
-            hero          = 'main > :first-child.hdg';
-
-        var controller  = new ScrollMagic.Controller(),
-            offset      = 0;
-
-        if( $(hero) ) {
-          offset = $(hero).height() + $(primary_nav).height() + adminHeight ;
-
-          //Adding styles to the primary nav and pinning
-          if( $(primary_nav) ) {
-            var primary_pin = new ScrollMagic.Scene({
-              triggerElement: hero,
-              offset: offset
-            })
-            .on("enter", function () {
-              $(primary_nav).removeClass('top');
-            })
-            .on("leave", function () {
-              $(primary_nav).addClass('top');
-            })
-            .addTo(controller);
-          }
-        }
-      }
-
       //Dev Note: going to move this into the Backgrounder component for reusability
       //BEOF Backgrounder
       var vh,vw;
