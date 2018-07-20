@@ -3,6 +3,8 @@
  * the wysiwyg
  */
 @import 'main.min.css';
-body {
+body,
+#tinymce {
+  padding: 1em !important;
   font-size: 14px !important;
 }
