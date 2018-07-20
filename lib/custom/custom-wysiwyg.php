@@ -21,15 +21,108 @@ add_filter( 'mce_buttons_2', 'll_new_mce_button' );
  * @return array       Tinyce data
  */
 function ll_format_tinymce( $data ) {
-    $style_formats = array(
 
-      // array(
-      //   'title'    => 'Button',
-      //   'classes'  => 'btn',
-      //   'selector' => 'a',
-      //   'wrapper'  => false
-      // ),
-    );
+  $style_formats = array(
+    array(
+      'title'    => 'Heading Sizes',
+      'items'  => array(
+        array(
+          'title'    => 'Main Heading',
+          'classes'  => 'large-paragraph-text',
+          'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li',
+          'wrapper'  => false
+        ),
+        array(
+          'title'    => 'Heading Style One',
+          'classes'  => 'h1',
+          'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li',
+          'wrapper'  => false
+        ),
+        array(
+          'title'    => 'Heading Style Two',
+          'classes'  => 'h2',
+          'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li',
+          'wrapper'  => false
+        ),
+        array(
+          'title'    => 'Heading Style Three',
+          'classes'  => 'h3',
+          'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li',
+          'wrapper'  => false
+        ),
+        array(
+          'title'    => 'Heading Style Four',
+          'classes'  => 'h4',
+          'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li',
+          'wrapper'  => false
+        ),
+        array(
+          'title'    => 'Heading Style Five',
+          'classes'  => 'h5',
+          'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li',
+          'wrapper'  => false
+        ),
+      ),
+    ),
+    array(
+      'title'    => 'Body Text',
+      'items'  => array(
+        array(
+          'title'    => 'Large Text',
+          'classes'  => 'large-paragraph-text',
+          'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li',
+          'wrapper'  => false
+        ),
+        array(
+          'title'    => 'Regular',
+          'classes'  => 'p',
+          'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li',
+          'wrapper'  => false
+        )
+      ),
+    ),
+    array(
+      'title' => 'Buttons & Links',
+      'items' => array(
+        array(
+          'title'    => 'Button',
+          'classes'  => 'btn',
+          'selector' => 'a',
+          'wrapper'  => false
+        )
+      ),
+    ),
+    // array(
+    //   'title' => 'Colors',
+    //   'items' => array(
+    //     array(
+    //       'title'    => 'Blue',
+    //       'classes'  => 'text-primary',
+    //       'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li',
+    //       'wrapper'  => false
+    //     ),
+    //     array(
+    //       'title'    => 'Black',
+    //       'classes'  => 'text-dark',
+    //       'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li',
+    //       'wrapper'  => false
+    //     ),
+    //     array(
+    //       'title'    => 'Gray',
+    //       'classes'  => 'text-muted',
+    //       'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li',
+    //       'wrapper'  => false
+    //     ),
+    //     array(
+    //       'title'    => 'White',
+    //       'classes'  => 'text-white',
+    //       'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li',
+    //       'wrapper'  => false
+    //     ),
+    //   ),
+    // )
+  );
+
 
   $data['style_formats'] = json_encode( $style_formats );
   return $data;
