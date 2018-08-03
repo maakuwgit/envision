@@ -335,6 +335,7 @@ body.locked {
   .dropdown-menu {
     position: absolute;
     align-items: flex-start;
+    z-index: 1;
 
     &.collapsed {
       display: none;
