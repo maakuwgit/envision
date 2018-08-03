@@ -47,6 +47,13 @@
     left: 0;
     right: 0;
     min-height: inherit;
+
+    .gmnoprint {
+      box-shadow: 0 0 0 10px rgba($white, 0.4);
+      border-radius: 200px;
+      opacity: 1 !important;
+      z-index: 100 !important;
+    }
   }
 
 }
